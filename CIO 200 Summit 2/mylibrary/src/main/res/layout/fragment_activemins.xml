@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="250dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active mins" />
+
+
+        <TextView
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By Week" />
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/left_btn"
+                android:background="@drawable/ic_chevron_left_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+            <TextView
+                android:id="@+id/testing_week_txt"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active mins" />
+
+            <Button
+                android:id="@+id/right_btn"
+                android:background="@drawable/ic_chevron_right_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+
+
+        </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:paddingBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="10dp"
+        >
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchartMins"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/round_linear"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/d_hr1"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_dailyscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#ea6749"
+                    android:layout_marginLeft="22dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/d_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/d_dailyscore"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Daily Average"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/d_h2"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="50dp"
+                android:gravity="right"
+                android:layout_toRightOf="@+id/d_hr1"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_totalscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#ea6749"
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/d_totalscore"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Total Score"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Month" />
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/left_btn1"
+                android:background="@drawable/ic_chevron_left_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+            <TextView
+                android:id="@+id/testing_week_txt1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active mins" />
+
+            <Button
+                android:id="@+id/right_btn1"
+                android:background="@drawable/ic_chevron_right_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:paddingBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp"
+            >
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchartMins_Monthh"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/round_linear"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/d_hr2"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_dailyscore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#ea6749"
+                    android:layout_marginLeft="22dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/d_daverage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/d_dailyscore1"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Weekly Average"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/d_hr3"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="50dp"
+                android:gravity="right"
+                android:layout_toRightOf="@+id/d_hr2"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_totalscore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#ea6749"
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/d_totalscore1"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Total Score"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Year" />
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/left_btn2"
+                android:background="@drawable/ic_chevron_left_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+            <TextView
+
+                android:id="@+id/testing_week_txt2"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active mins" />
+
+            <Button
+                android:id="@+id/right_btn2"
+                android:background="@drawable/ic_chevron_right_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:paddingBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp"
+            >
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchartMins_year"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_linear"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/hr5"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_dailyscore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ea6749"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="22dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/d_daverage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/d_dailyscore2"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Monthly Average"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hr6"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="50dp"
+                android:gravity="right"
+                android:layout_toRightOf="@+id/hr5"
+                android:background="@drawable/round_linear"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/d_totalscore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#ea6749"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/d_totalscore2"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Total Score"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

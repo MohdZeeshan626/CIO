@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/parent_layout"
+    android:src="@drawable/leaderboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:paddingBottom="50dp"
+        android:layout_centerHorizontal="true"
+       android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/leaderboard_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account_circle_black_24dp"/>
+
+            <TextView
+                android:id="@+id/leaderboard_txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/leaderboard_image"
+                android:layout_toLeftOf="@+id/leaderboard_txtkm"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:singleLine="false"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:text="Amanda"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:text="55 km"
+                android:layout_toLeftOf="@+id/leaderboard_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/leaderboard_txtkm"/>
+
+            <ImageView
+                android:id="@+id/leaderboard_pos"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="40dp"
+                android:src="@drawable/medfirst"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

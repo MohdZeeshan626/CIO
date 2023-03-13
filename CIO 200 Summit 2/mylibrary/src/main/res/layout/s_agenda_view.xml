@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:gravity="left"
+    android:background="#fff4f6fa"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/theatrename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:textColor="#8F9FA9"
+        android:textSize="12sp" />
+    <RelativeLayout
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_margin="15dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/speakerbackground"
+        android:layout_below="@+id/theatrename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/broadcaset_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+
+            >
+            <ImageView
+                android:id="@+id/broadcast"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:gravity="left"
+                />
+            <ImageView
+                android:id="@+id/youtubevideo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/time"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fromtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:gravity="right"
+                android:text="07:00 AM"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/totime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:gravity="right"
+                android:text="10:30 AM"
+                android:textColor="#8F9FA9"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/dots"
+            android:layout_toRightOf="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="10sp"
+            android:padding="3dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="right"
+            app:awesome_font="font_awesome"
+            app:awesome_icon="FA_CIRCLE" />
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_toLeftOf="@+id/isch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@+id/dots"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="2"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Appa/SRAPPA/TNAPPA/Fun RUN"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <cyd.awesome.material.AwesomeText
+                    android:layout_centerVertical="true"
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8F9FA9"
+                    android:textSize="12sp"
+                    app:awesome_font="font_awesome"
+                    app:awesome_icon="FA_MAP_MARKER" />
+
+
+                <TextView
+                    android:id="@+id/venue"
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/location"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:fontFamily="@string/roboto_regular"
+                    android:textColor="#8F9FA9"
+                    android:text="Bangalore"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:background="@drawable/ic_chevron_right_black_24dp" />
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/isch"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            app:awesome_font="font_awesome"
+            app:awesome_icon="FA_HEART"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_below="@+id/linearlayout"
+            android:background="@color/gray"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/homescreen_bg">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff8c80f8"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme"
+        app:navigationIcon="@drawable/backwhite"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textsync"
+        android:layout_toLeftOf="@+id/progressBar3"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:singleLine="false"
+        android:text="Last synced 3 minute ago"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:id="@+id/sync"
+        android:visibility="visible"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/sync_ic"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/secondaryProgress"
+        android:layout_width="40dp"
+        android:layout_marginLeft="250dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+
+        android:layout_alignParentEnd="true"
+        android:background="#ff8c80f8"
+        android:progressBackgroundTint="@color/white"
+        android:layout_height="35dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="wrap_content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:background="@color/homescreen_bg"
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <LinearLayout
+                        android:id="@+id/abc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="none"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:id="@+id/youra"
+                                android:fontFamily="@font/roboto_slab_bold"
+                                android:text="YOUR ACTIVITY"
+                                android:textSize="15sp"/>
+
+                            <Button
+                                android:id="@+id/button6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="5dp"
+                                android:visibility="gone"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/rounded_bg_home"
+                                android:padding="5dp"
+                                android:text="  Connect a device  "
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="@color/zm_gray_5"
+                            android:baselineAligned="false">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:gravity="start"
+                                android:padding="10dp"
+                                android:id="@id/r1"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="#ff8c80f8"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="STEPS"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@string/rubic_regular"
+                                    android:id="@+id/steps"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/stepimg"
+                                    android:layout_margin="10dp"
+                                    android:padding="20dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_below="@+id/steps"
+                                    android:src="@drawable/whitesteps"
+                                    ></ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/points"
+                                    android:layout_below="@id/stepimg"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:fontFamily="@font/roboto_slab_bold"
+                                    android:textSize="24sp"
+                                    android:textColor="@color/white"></TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/points"
+                                    android:text="last update 3min"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/off_white"></TextView>
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:id="@+id/r2"
+                                android:layout_alignParentEnd="true"
+                                android:padding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="#ff8c80f8"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CHALLENGES"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@string/rubic_regular"
+                                    android:id="@+id/steps1"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/stepimg1"
+                                    android:layout_margin="10dp"
+                                    android:padding="20dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_below="@+id/steps1"
+                                    android:src="@drawable/circledot"
+                                    ></ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/points1"
+                                    android:layout_below="@id/stepimg1"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 Joined"
+                                    android:layout_marginLeft="25dp"
+                                    android:fontFamily="@font/roboto_slab_bold"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="24sp"
+                                    android:textColor="@color/white"></TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/points1"
+                                    android:text="last update 3min"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/off_white"></TextView>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+
+                        <!--<androidx.recyclerview.widget.RecyclerView-->
+                        <!--android:background="#f4f5f9"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="15dp"-->
+                        <!--android:id="@+id/recyclerview_activity"-->
+                        <!--&gt;</androidx.recyclerview.widget.RecyclerView>-->
+                        <Button
+                            android:id="@+id/btn_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            android:background="@drawable/roundbtn"
+                            android:padding="@dimen/zm_ui_kit_text_size_15sp"
+                            android:layout_margin="15dp"
+                            android:text="View Activity Insights"/>
+
+                        <LinearLayout
+                            android:id="@+id/linearChallenge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingTop="35dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:fontFamily="@font/roboto_slab_bold"
+                                android:text="Challenges"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"/>
+                            <Button
+                                android:id="@+id/joinbtn_create"
+                                android:layout_width="170dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/healthbutton"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textAllCaps="false"
+                                android:text="+ Join/Creates"
+                                android:textColor="@color/white"/>
+
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </RelativeLayout>
+
+
+                        <!--<LinearLayout-->
+                        <!--android:id="@+id/linearTab"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:orientation="horizontal">-->
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="0"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="15sp"/>-->
+                        <!--<TextView-->
+                        <!--android:id="@+id/txtactive"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:layout_marginRight="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="ACTIVE"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="30dp"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="0"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/txtupcoming"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:layout_marginLeft="15dp"-->
+
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:layout_marginRight="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="UPCOMING"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="0"-->
+                        <!--android:textColor="@color/black"-->
+
+                        <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/txtcompleted"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:fontFamily="@font/roboto_medium"-->
+                        <!--android:text="COMPLETED"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="15sp"/>-->
+                        <!--</LinearLayout>-->
+                    </LinearLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearTab"
+                    app:tabIndicatorColor="@color/zm_black_btn_bg"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabTextColor="@color/grey_800"
+                    android:background="@color/white"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    />
+            </com.google.android.material.appbar.AppBarLayout>
+          <androidx.core.widget.NestedScrollView
+              android:layout_width="match_parent"
+              android:id="@+id/nestview"
+              android:fillViewport="true"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              android:scrollbars="vertical"
+              android:layout_height="match_parent">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/collapse"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
+            </androidx.viewpager.widget.ViewPager>
+          </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="bottom">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                app:elevation="6dp"
+                android:background="?android:attr/windowBackground"
+                android:backgroundTint="@color/white"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_navigation"
+                />
+
+        </FrameLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bottom_app_bar"
+            style="@style/Health"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/windowBackground"
+            android:backgroundTint="@color/white"
+            app:fabAlignmentMode="center" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

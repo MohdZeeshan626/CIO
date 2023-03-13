@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.webmobi.gecmedia.Views.DiscoveryEventDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/dis_details_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:navigationIcon="@drawable/backwhite"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dis_details_bottomsheet"
+        android:layout_below="@+id/dis_details_titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/dis_details_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/image_full_gradient"
+                    android:src="@drawable/banner" />
+
+                <ImageView
+                    android:id="@+id/dis_details_addwishlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_button"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/abc_tintcolor" />
+
+                <View
+                    android:id="@+id/empty_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="30dp" />
+
+                <RelativeLayout
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/empty_space"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="60dp">
+
+                    <ImageView
+                        android:id="@+id/dis_details_logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/dis_details_logo">
+
+                        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                            android:id="@+id/dis_details_eventtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Rotary Bangalore\nRajarajeshwarinagar Centnnial"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:customFont="@string/roboto_regular_light" />
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/date_marker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dis_details_eventtitle"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp"
+                            app:awesome_font="font_awesome"
+                            app:awesome_icon="FA_CALENDAR_O" />
+
+                        <TextView
+                            android:id="@+id/dis_details_eventdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dis_details_eventtitle"
+                            android:layout_toRightOf="@+id/date_marker"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@string/roboto_regular_light"
+                            android:freezesText="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="01-06-2018 to 03-06-2018"
+                            android:textColor="#fff"
+                            android:textIsSelectable="true"
+                            android:textSize="12sp" />
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/marker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/date_marker"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp"
+                            app:awesome_font="font_awesome"
+                            app:awesome_icon="FA_MAP_MARKER" />
+
+                        <TextView
+                            android:id="@+id/dis_details_eventlocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dis_details_eventdate"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/marker"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@string/roboto_regular_light"
+                            android:freezesText="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="Bengaluru,KA"
+                            android:textColor="#fff"
+                            android:textIsSelectable="true"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/discovery_details_int_usr_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/user_icon" />
+
+                <TextView
+                    android:id="@+id/dis_details_interest_dtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="You and 8 others intrested in this event"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/discovery_details_int_usr_img"
+                    app:layout_constraintLeft_toRightOf="@+id/discovery_details_int_usr_img"
+                    app:layout_constraintTop_toTopOf="@+id/discovery_details_int_usr_img" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/dis_details_int_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/intrest_button"
+                android:ems="7"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Interested"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/dis_details_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <FrameLayout
+                android:id="@+id/map_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/dlg_center_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="10dp">
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="150dp"
+                     android:background="@drawable/image_background" />-->
+
+                <fragment
+                    android:id="@+id/dis_details_map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/dlg_center_layout"
+                    map:zOrderOnTop="true" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/dis_details_bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_light"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/dis_details_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Add Calendar"
+            android:textColor="#237be9" />
+
+        <TextView
+            android:id="@+id/dis_details_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Invite People"
+            android:textColor="#2cdd62" />
+
+    </LinearLayout>
+</RelativeLayout>

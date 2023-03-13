@@ -1,0 +1,497 @@
+{
+  "version": 52,
+  "appId": "25421b5312ef9b538296933793d67b887dc1",
+  "event_id": "a5d72f633c6f8a0e964525123a500376a26d",
+  "appName": "GEC Media Group",
+  "appUrl": "10105",
+  "appLoadingImage": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667577338751_Event_Logo_The_world_CIO_200_1024x1024px.png",
+  "appLogo": "https://webmobi.s3.amazonaws.com/nativeapps/devwebmobitechconference2018/download__1_.jpg",
+  "appDescription": "",
+  "favicon": "",
+  "defaultSponsor": "",
+  "forceUpdate": true,
+  "icon": false,
+  "timer": true,
+  "info_privacy": false,
+  "iosurl": "https://itunes.apple.com/us/app/webmobi/id1133137092?mt=8",
+  "androidurl": "https://play.google.com/store/apps/details?id=com.webmobi.eventsapp",
+  "weburl": "http://website.webmobi.com/10105",
+  "private_key": "",
+  "common_password": 0,
+  "qr_code": 0,
+  "startdate": 1669075200000,
+  "enddate": 1669248000000,
+  "active": 10,
+  "venue": "Washington, DC, USA",
+  "latitude": 13.7563309,
+  "longitude": 100.5017651,
+  "location": "Bangkok, Thailand",
+  "city": "Bangkok",
+  "country": "Thailand",
+  "app_category": "Trade Show and Events",
+  "registration_flag": 0,
+  "theme_color": "#F814A7",
+  "theme_strips": "#F814A7",
+  "theme_selected": "#F814A7",
+  "theme_border": "#F814A7",
+  "addon_modules": [
+    "preference"
+  ],
+  "web_template": "",
+  "event_organizer_email": "sam@webmobi.com",
+  "timezone": "IST",
+  "events": [
+    {
+      "tabs": [
+        {
+          "type": "home",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "home",
+          "title": "Home",
+          "caption": "Home",
+          "checkvalue": "home0",
+          "position": 1,
+          "mod_display": "webmobi",
+          "items": [
+            {
+              "imagenumber": 5,
+              "value": "aboutus0",
+              "size": 6,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667574685086_Top_Panel_1440x480px.jpg"
+            },
+            {
+              "imagenumber": 1,
+              "value": "agenda0",
+              "size": 7,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667574755931_My_Agenda_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": null,
+              "value": "speakersData0",
+              "size": 8,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576490760_Speakers_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 3,
+              "value": "exhibitorsData0",
+              "size": 9,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576560172_Exhibitors_List_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": null,
+              "value": "sponsorsData0",
+              "size": 10,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576594664_Partners_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "attendee1",
+              "size": 12,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576701703_Attendees_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": null,
+              "value": "socialmedia0",
+              "size": 14,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576826538_Social_Media_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "map0",
+              "size": 15,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667576879676_Venue_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "aboutus2",
+              "size": 16,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821674633_CISO_Conclave_2022_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "aboutus3",
+              "size": 17,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821693360_Exclusive_Boardrooms_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "aboutus4",
+              "size": 18,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821710082_Live_Event_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "aboutus5",
+              "size": 19,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821732227_Workshop_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": null,
+              "value": "myInfo0",
+              "size": 20,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821831081_My_Badge_Middle_Panels___720px_by_480px.jpg"
+            },
+            {
+              "imagenumber": 0,
+              "value": "aboutus6",
+              "size": 22,
+              "description": "",
+              "imageUrl": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667821940655_Bottom_Panel_1440x480px.jpg"
+            }
+          ]
+        },
+        {
+          "type": "agenda",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "flag",
+          "title": "Agenda",
+          "caption": "Agenda",
+          "position": 2,
+          "mod_display": "webmobi",
+          "checkvalue": "agenda0",
+          "categories": [],
+          "agenda": []
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "About Us",
+          "caption": "About Us",
+          "position": 3,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus0",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "contactUs",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "inbox",
+          "title": "Contact Us",
+          "caption": "Contact Us",
+          "position": 4,
+          "mod_display": "webmobi",
+          "checkvalue": "contactUs0"
+        },
+        {
+          "type": "speakersData",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "users",
+          "title": "Speakers",
+          "caption": "Speakers",
+          "position": 5,
+          "mod_display": "webmobi",
+          "checkvalue": "speakersData0",
+          "items": []
+        },
+        {
+          "type": "pdf",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "file-pdf-o",
+          "title": "Documents",
+          "caption": "Documents",
+          "position": 6,
+          "mod_display": "webmobi",
+          "checkvalue": "pdf0",
+          "pdfurl": []
+        },
+        {
+          "type": "map",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "map-marker",
+          "title": "Map",
+          "caption": "Map",
+          "position": 7,
+          "mod_display": "webmobi",
+          "checkvalue": "map0",
+          "floors": []
+        },
+        {
+          "type": "video",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "play",
+          "title": "Display your videos here",
+          "caption": "Display your videos here",
+          "position": 8,
+          "mod_display": "webmobi",
+          "checkvalue": "video0",
+          "items": []
+        },
+        {
+          "type": "survey",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Live Polls",
+          "caption": "Live Polls",
+          "position": 9,
+          "mod_display": "mobile",
+          "checkvalue": "survey0",
+          "items": []
+        },
+        {
+          "type": "socialmedia",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "rss",
+          "title": "Social Media",
+          "caption": "Social Media",
+          "position": 10,
+          "mod_display": "webmobi",
+          "checkvalue": "socialmedia0",
+          "items": []
+        },
+        {
+          "type": "banner",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "gamepad",
+          "title": "Banner Ads",
+          "caption": "Banner Ads",
+          "position": 11,
+          "mod_display": "mobile",
+          "checkvalue": "banner0",
+          "items": []
+        },
+        {
+          "type": "exhibitorsData",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "briefcase",
+          "title": "Exhibitors",
+          "caption": "Exhibitors",
+          "position": 11,
+          "mod_display": "webmobi",
+          "checkvalue": "exhibitorsData0",
+          "categories": [],
+          "items": []
+        },
+        {
+          "type": "mySchedules",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "calendar_check_o",
+          "title": "My Schedules",
+          "caption": "My Schedules",
+          "position": 12,
+          "mod_display": "webmobi",
+          "checkvalue": "mySchedules0"
+        },
+        {
+          "type": "myNotifications",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "bell_o",
+          "title": "Notifications",
+          "caption": "Notifications",
+          "position": 13,
+          "mod_display": "webmobi",
+          "checkvalue": "myNotifications0"
+        },
+        {
+          "type": "myNotes",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "sticky_note_o",
+          "title": "My Notes",
+          "caption": "My Notes",
+          "position": 14,
+          "mod_display": "webmobi",
+          "checkvalue": "myNotes0"
+        },
+        {
+          "type": "myChats",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "commenting_o",
+          "title": "My Chats",
+          "caption": "My Chats",
+          "position": 15,
+          "mod_display": "webmobi",
+          "checkvalue": "myChats0"
+        },
+        {
+          "type": "sponsorsData",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "briefcase",
+          "title": "Sponsors",
+          "caption": "Sponsors",
+          "position": 16,
+          "mod_display": "webmobi",
+          "checkvalue": "sponsorsData0",
+          "categories": [],
+          "items": []
+        },
+        {
+          "type": "myCompanies",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "briefcase",
+          "title": "My Companies",
+          "caption": "My Companies",
+          "position": 17,
+          "mod_display": "webmobi",
+          "checkvalue": "myCompanies0"
+        },
+        {
+          "type": "myInfo",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "commenting_o",
+          "title": "My Info",
+          "caption": "My Info",
+          "position": 18,
+          "mod_display": "webmobi",
+          "checkvalue": "myInfo0"
+        },
+        {
+          "type": "gamification",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "gamepad",
+          "title": "Leaderboard",
+          "caption": "Leaderboard",
+          "position": 19,
+          "mod_display": "mobile",
+          "checkvalue": "gamification1"
+        },
+        {
+          "type": "gallery",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "users",
+          "title": "Gallery",
+          "caption": "See the Gallery Details",
+          "position": 20,
+          "mod_display": "webmobi",
+          "checkvalue": "gallery1"
+        },
+        {
+          "type": "attendee",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "users",
+          "title": "Attendee",
+          "caption": "See the Attendees Details",
+          "position": 22,
+          "mod_display": "webmobi",
+          "checkvalue": "attendee1"
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "CISO Conclave",
+          "caption": "CISO Conclave",
+          "position": 23,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus2",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Exclusive Boardrooms",
+          "caption": "Exclusive Boardrooms",
+          "position": 24,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus3",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Live Event",
+          "caption": "Live Event",
+          "position": 25,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus4",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Workshop",
+          "caption": "Workshop",
+          "position": 26,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus5",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Bottom Panel",
+          "caption": "Bottom Panel",
+          "position": 27,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus6",
+          "content": "",
+          "details": ""
+        },
+        {
+          "type": "aboutus",
+          "order_by": "default",
+          "sub_type": "",
+          "iconCls": "comment",
+          "title": "Match Making",
+          "caption": "Match Making",
+          "position": 28,
+          "mod_display": "webmobi",
+          "checkvalue": "aboutus7",
+          "content": "",
+          "details": ""
+        }
+      ]
+    }
+  ],
+  "organizer_name": "CIO",
+  "organizer_website": "",
+  "mobile_enable": 1,
+  "app_role_id": 5,
+  "theme_type": "",
+  "websiteImage": "https://webmobi.s3.amazonaws.com/nativeapps/10105/1667577368636_Event_Logo_The_world_CIO_200_1024x1024px.png",
+  "showFeedsOnImageGallery": "yes",
+  "disable_items": [
+    "homepanelstriptheme",
+    "agora",
+    "disable_external_zoom",
+    "3d"
+  ]
+}

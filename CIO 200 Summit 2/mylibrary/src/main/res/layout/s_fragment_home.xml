@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ad_card_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/mygrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="5" />
+
+            <LinearLayout
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="Event Starts In:"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    foo:customFont="@string/roboto_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ldays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Days"
+                            android:textSize="18sp"
+                            foo:customFont="@string/roboto_regular" />
+
+                        <TextView
+                            android:id="@+id/dayshow"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@color/sColorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="25"
+                            android:fontFamily="@string/roboto_regular"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lhrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Hours"
+                            android:textSize="18sp"
+                            foo:customFont="@string/roboto_regular" />
+
+                        <TextView
+                            android:id="@+id/hrshow"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@color/sColorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="25"
+                            android:fontFamily="@string/roboto_regular"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lmins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mins"
+                            android:textSize="18sp"
+                            foo:customFont="@string/roboto_regular" />
+
+                        <TextView
+                            android:id="@+id/minshow"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@color/sColorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="25"
+                            android:fontFamily="@string/roboto_regular"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/secs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Secs"
+                            android:textSize="18sp"
+                            foo:customFont="@string/roboto_regular" />
+
+                        <TextView
+                            android:id="@+id/secshow"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@color/sColorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="25"
+                            android:fontFamily="@string/roboto_regular"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ad_card_view"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="42dp"
+        android:visibility="gone">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/adsImage_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

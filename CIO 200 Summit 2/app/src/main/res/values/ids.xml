@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="d22" type="id" />
+    <item name="chatwith" type="id" />
+    <item name="rightback" type="id" />
+    <item name="bottomview" type="id" />
+    <item name="bottomv" type="id" />
+</resources>

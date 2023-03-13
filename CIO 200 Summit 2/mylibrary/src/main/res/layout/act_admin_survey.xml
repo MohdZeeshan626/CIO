@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite"
+        foo:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Select attendee to start survey"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bottom_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:hint="Search here..."
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:id="@+id/attendee_fl"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/userview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:divider="@color/light_gray"
+                    android:dividerHeight="0dp" />
+
+                <TextView
+                    android:id="@+id/noitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="No attendees available"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/vtryagain"
+                layout="@layout/s_tryagain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_shadow"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:id="@+id/tv_start"
+        android:text="START"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:fontFamily="@string/roboto_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

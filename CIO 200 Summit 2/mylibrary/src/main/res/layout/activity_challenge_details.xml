@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.Activity.ChallengeDetailsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/rubic_regular"
+        android:textColor="#ff2d3142"
+        android:textSize="22sp"
+        android:id="@+id/mainheader"
+        android:text="Set Challenge Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/cstep"
+            android:fontFamily="@string/rubic_regular"
+            android:textColor="#ff8b8b8b"
+            android:textSize="11sp"
+            android:text="STEP 4/4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerview"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/mainheader">
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/cname"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@string/rubic_regular"
+            android:textColor="#ff2d3142"
+            android:textSize="17sp"
+            android:text="Challenge name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="15dp"
+
+                android:layout_marginTop="11dp"
+                android:layout_toRightOf="@+id/cname"
+                android:fontFamily="@font/roboto_slab"
+                android:text="38 character limit"
+                android:textColor="#ff9c9eb9"
+                android:textSize="12sp" />
+
+            <EditText
+            android:padding="5dp"
+            android:hint="  World's greatest challenge"
+            android:background="@drawable/roundedittext"
+            android:maxLength="38"
+            android:paddingLeft="15dp"
+            android:layout_below="@id/cname"
+            android:id="@+id/ed_challengeName"
+            android:layout_margin="10dp"
+            android:layout_width="350dp"
+                android:textSize="15sp"
+            android:layout_height="40dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerview2"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/headerview">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/cdes"
+            android:fontFamily="@string/rubic_regular"
+            android:textColor="#ff2d3142"
+            android:textSize="17sp"
+            android:text="Challenge description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_slab"
+                android:textColor="#ff9c9eb9"
+                android:textSize="12sp"
+                android:layout_below="@id/cdes"
+                android:layout_marginBottom="5dp"
+                android:text="Do you have a theme or a purpose?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/roboto_slab"
+            android:textColor="#ff9c9eb9"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/cdes"
+            android:text="500 character limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/ed_challengDescrip"
+                android:layout_width="350dp"
+                android:layout_height="180dp"
+                android:layout_below="@id/cdes"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/roundedittext"
+                android:hint="Here are a few words to get people excited about this challenge "
+                android:maxLength="38"
+                android:padding="10dp"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cimage"
+            android:padding="4dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/creategroupform">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Challenge image"
+                android:id="@+id/ctxtimage"
+                android:textSize="17sp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@string/rubic_regular"
+                android:textColor="#203142"
+                />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="160dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/zm_dialog_white_roundrect_bg"
+                android:layout_below="@+id/ctxtimage"
+                android:layout_height="160dp"
+                android:src="@drawable/challengeimg"
+                 />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="63dp"
+                android:background="@drawable/healthbutton"
+                android:padding="10dp"
+                android:text="Edit challenge image"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/privacy"
+            android:padding="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/cimage">
+
+            <TextView
+                android:id="@+id/group_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@string/rubic_regular"
+                android:text="Privacy"
+                android:textColor="#ff2d3142"
+                android:textSize="17sp"
+               />
+
+            <LinearLayout
+                android:id="@+id/public_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:padding="3dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/zm_ui_kit_btn_round_white_gray_border"
+                android:layout_gravity="start"
+                android:layout_below="@+id/group_privacy"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/gpp"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/gp_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgpublic"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:text="Public"
+                        android:textColor="#ff8b8b8b"
+                        android:textSize="15sp"
+                        android:textStyle="normal"></TextView>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgpublic"
+                        android:layout_width="@dimen/zm_height_36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="1dp"
+
+                        android:padding="5dp"
+                        android:src="@drawable/ppublic">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                    <!-- <RadioButton
+                         android:id="@+id/radio_pirates"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:layout_alignParentTop="true"
+                         android:layout_marginEnd="18dp"
+
+                         android:layout_marginTop="15dp"
+                         android:buttonTint="#ff8b8b8b"
+                         android:onClick="onRadioButtonClickedPublic"
+                         android:padding="5dp" />-->
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/private_privacy"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:padding="3dp"
+                android:layout_toRightOf="@+id/public_privacy"
+                android:layout_below="@+id/group_privacy"
+                android:background="@drawable/zm_ui_kit_btn_round_white_gray_border"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:gravity="right"
+
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/rc"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/gp_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imgpublic1"
+                        android:padding="5dp"
+                        android:layout_marginTop="1dp"
+                        android:text="Private"
+                        android:textColor="#ff8b8b8b"
+                        android:textSize="17sp"
+                        android:textStyle="normal"></TextView>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgpublic1"
+                        android:layout_width="@dimen/zm_height_36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="1dp"
+                        android:padding="5dp"
+                        android:src="@drawable/pprivate">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                    <!-- <RadioButton
+                         android:id="@+id/radio_pirates"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:layout_alignParentTop="true"
+                         android:layout_marginEnd="18dp"
+
+                         android:layout_marginTop="15dp"
+                         android:buttonTint="#ff8b8b8b"
+                         android:onClick="onRadioButtonClickedPublic"
+                         android:padding="5dp" />-->
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/v1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/private_privacy"
+                android:layout_marginTop="15dp"
+                android:background="#e8ebf2"></View>
+
+            <TextView
+                android:id="@+id/privacytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:layout_below="@+id/v1"
+                android:text="Anyone can see who's in the challenge"
+                android:layout_centerInParent="true"
+                android:textColor="@color/zm_ui_kit_color_gray_8E8E93"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <Button
+           android:id="@+id/btn_savenfinish"
+            android:layout_gravity="center_horizontal"
+            android:text="Save and Finish"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:background="@drawable/healthbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

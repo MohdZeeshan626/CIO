@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="100dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:background="@drawable/s_all_side_radius"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backward"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Type Your Question"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@string/roboto_regular" />
+    <TextView
+        android:layout_alignBaseline="@id/h1"
+        android:layout_alignParentRight="true"
+        android:hint="1000"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/textLimit"
+        android:fontFamily="@string/roboto_regular"
+        android:textSize="16sp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/questions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/h1"
+        android:layout_margin="10dp"
+        android:background="@drawable/s_aboutborder"
+        android:gravity="top"
+        android:hint=""
+        android:maxLength="1000"
+        android:padding="5dp"
+        android:fontFamily="@string/roboto_regular"
+        android:textColor="@color/black" />
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/canceltxt"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:text="CANCEL"
+                android:textAllCaps="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:fontFamily="@string/roboto_regular"
+                android:minHeight="40dp"
+                android:background="@drawable/lead_gen_btn_bckg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/savetxt"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:text="  Submit  "
+                android:textAllCaps="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:minHeight="40dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/lead_gen_btn_bckg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

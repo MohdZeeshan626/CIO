@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/device_list_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- <android.support.constraint.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">-->
+
+        <ImageView
+            android:id="@+id/list_row_assignedbeacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:src="@drawable/assigned_beacon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/list_row_devicename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/list_row_assignedbeacon"
+            android:fontFamily="@string/roboto_regular"
+            android:padding="10dp"
+            android:text="MAC ID"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+        <!-- <TextView
+             android:id="@+id/list_row_devicerssi"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@string/roboto_regular"
+             android:padding="10dp"
+             android:text="-44"
+             android:layout_alignParentRight="true"
+             android:textColor="@android:color/black"
+             android:layout_marginRight="10dp"
+             android:textSize="20sp"
+             />-->
+        <ImageView
+            android:id="@+id/list_row_devicerssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:src="@drawable/good_signal" />
+    </RelativeLayout>
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+</LinearLayout>

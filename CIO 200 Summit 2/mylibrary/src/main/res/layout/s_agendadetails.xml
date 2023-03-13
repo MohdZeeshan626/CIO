@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newuibg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fullagenda"
+        android:layout_height="match_parent"
+        android:background="#fff4f6fa"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            foo:navigationIcon="@drawable/backwhite" />
+        <ScrollView
+            android:id="@+id/mscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff4f6fa"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/etitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:gravity="center"
+
+                    android:paddingBottom="20dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Connecting the Dots:Streamlining Systems for Effective Planning and Decision Making"
+                    android:textColor="#ff2d3143"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/datetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enrollseat"
+                    android:background="@drawable/bottom_border"
+                    android:orientation="vertical"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingStart="20dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:paddingLeft="10dp"
+                            android:text="Thu,Jul 14,2016"
+                            android:textColor="#ffacacac"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/day"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@string/roboto_regular"
+                            android:gravity="right"
+                            android:paddingRight="20dp"
+                            android:text="9:30 AM - 10:30 AM"
+                            android:textColor="#ff000000"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/speakerbackground"
+                        android:paddingTop="15dp">
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/dots"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="8dp"
+
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="12sp"
+                            foo:awesome_font="font_awesome"
+                            foo:awesome_icon="FA_CIRCLE" />
+
+                        <TextView
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/dots"
+                            android:fontFamily="@string/roboto_regular"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="5dp"
+                            android:text="Breakout Session"
+                            android:textColor="#ff2d3143"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/limitofseat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etitle"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+                    <Button
+                        android:id="@+id/limit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:paddingLeft="26dp"
+                        android:paddingRight="26dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@string/roboto_regular"
+                        android:text=""
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/healthpostbut"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/limitseat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="19dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:clickable="true"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/plus"
+                        android:layout_width="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/plus1" />
+
+                    <TextView
+                        android:id="@+id/enroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:textAllCaps="false"
+                        android:layout_toRightOf="@+id/plus"
+                        android:fontFamily="@string/roboto_regular"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/totalusers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="false"
+                        android:layout_toRightOf="@+id/enroll"
+                        android:fontFamily="@string/roboto_regular"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/joinmeeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/m_green"
+                    android:onClick="joinmeet"
+                    android:visibility="gone"
+                    android:text="Join Meeting"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="12dp">
+
+
+                </Button>
+
+
+                <RelativeLayout
+                    android:id="@+id/loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="12dp"
+                  >
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#8F9FA9"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_MAP_MARKER" />
+
+
+                    <TextView
+                        android:id="@+id/venue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_toRightOf="@+id/location"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@string/roboto_regular"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp" />
+
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@drawable/bottom_border"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/rl_floor_locHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/locat_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#ff2d3143"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_MAP_MARKER" />
+
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_toRightOf="@+id/locat_icon"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@string/roboto_regular"
+                        android:singleLine="true"
+                        android:text="Location"
+                        android:textStyle="bold"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/addnotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/inote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#ff2d3143"
+                        android:textSize="20sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_PENCIL_SQUARE_O" />
+
+
+                    <TextView
+                        android:id="@+id/txtnote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/inote"
+                        android:ellipsize="marquee"
+                        android:paddingLeft="8dp"
+                        android:fontFamily="@string/roboto_regular"
+                        android:singleLine="true"
+                        android:text="Add Notes"
+                        android:textStyle="bold"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ratingbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                   >
+
+
+                    <TextView
+                        android:id="@+id/txtrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ratingBar"
+                        android:ellipsize="marquee"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_centerVertical="true"
+                        android:text="Rate this"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/customRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="14dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:isIndicator="true" />
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdes"
+                    android:background="@drawable/speakerbackground"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="12dp">
+                    <TextView
+                        android:text="Description"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingLeft="8dp"
+                        android:layout_margin="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                      android:fontFamily="@string/roboto_regular"
+                        android:background="@drawable/speakerbackground"
+                        android:textColor="#ff2d3143"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_des_head_ing"
+                        />
+                    <LinearLayout
+                        android:id="@+id/speakerLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/speakerbackground"
+                        android:orientation="vertical"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginLeft="0dp"
+                        android:paddingRight="12dp">
+
+
+                        <TextView
+                            android:id="@+id/des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="hello"
+                            android:paddingLeft="8dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="#ff2d3143"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/speakerdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/s1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:paddingLeft="8dp"
+                        android:fontFamily="@string/roboto_regular"
+                        android:text="Speakers"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/speakers"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                <LinearLayout
+                    android:id="@+id/pdfdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingBottom="15dp"
+                        android:paddingStart="20dp"
+                        android:fontFamily="@string/roboto_regular"
+                        android:paddingTop="15dp"
+                        android:text="Documents"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <RelativeLayout
+                        android:id="@+id/documents"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/speakerbackground"
+                        android:paddingLeft="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:paddingRight="12dp"
+                        android:paddingTop="15dp">
+
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/ipdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp"
+                            foo:awesome_font="font_awesome"
+                            foo:awesome_icon="FA_FILE_PDF_O" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toLeftOf="@+id/idownload"
+                            android:layout_toRightOf="@+id/ipdf"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtpdf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@string/roboto_regular"
+                                android:singleLine="true"
+                                android:text="Bangalore"
+                                android:textColor="#ff2d3143"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/filesize"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@string/roboto_regular"
+                                android:singleLine="true"
+                                android:text="8MB"
+                                android:textColor="#8F9FA9"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/ask_question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#fff4f6fa"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/iv_ask_ques"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/healthimagecircle"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+
+                        android:src="@drawable/questionmark1" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toRightOf="@+id/iv_ask_ques"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_ask_ques"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="Ask a Question"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ask_poll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#fff4f6fa"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/iv_polls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/healthimagecircle"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/argument" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.3dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toRightOf="@+id/iv_polls"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_ask_poll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="Live Poll"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ask_survey_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="#fff4f6fa"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:paddingRight="12dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_survey_ques"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/healthimagecircle"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/team" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toRightOf="@+id/iv_survey_ques"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_survey_ques"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imageView2"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="Participate for Survey"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/live_stream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="#fff4f6fa"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:paddingRight="12dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_live_stream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/healthimagecircle"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/streaming" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toRightOf="@+id/iv_live_stream"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_live_stream"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/iv_live_stream1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="Live Stream"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_live_stream1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/recorded_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="#fff4f6fa"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:paddingRight="12dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_recorded_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/healthimagecircle"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/recordvideo" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toRightOf="@+id/iv_recorded_video"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_recorded"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/iv_recorded1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="Recorded Videos"
+                            android:textColor="#ff2d3143"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_recorded1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/live_broad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:paddingLeft="10dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp">
+                   <Button
+                       android:id="@+id/joinsession"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Join Live Session"
+                       android:textColor="@color/white"
+                       android:layout_margin="3dp"
+                       android:background="@drawable/rounded_bg_home"
+                       />
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/timer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:text="Session will start in:"
+                        android:textColor="#ff2d3143"
+                        android:textSize="18sp"
+                        foo:customFont="@string/roboto_regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ldays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dayshow"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/rounded_bg_home"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="25"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Days"
+                                android:textSize="16sp"
+                                foo:customFont="@string/roboto_regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lhrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/hrshow"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/rounded_bg_home"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="25"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Hours"
+                                android:textSize="16sp"
+                                foo:customFont="@string/roboto_regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lmins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/minshow"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/rounded_bg_home"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="25"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Mins"
+                                android:textSize="16sp"
+                                foo:customFont="@string/roboto_regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/secs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/secshow"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/rounded_bg_home"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="25"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Secs"
+                                android:textSize="16sp"
+                                foo:customFont="@string/roboto_regular" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/addschedule"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/transparent_back"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="12dp"
+            android:paddingTop="15dp">
+
+
+            <TextView
+                android:id="@+id/txtsch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:fontFamily="@string/roboto_regular"
+                android:singleLine="true"
+                android:text="ADD TO MY SCHEDULE"
+                android:textColor="#439FD8"
+                android:textSize="14sp" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/isch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/txtsch"
+                android:textColor="#439FD8"
+                android:textSize="16sp"
+                foo:awesome_font="material_design"
+                foo:awesome_icon="MD_ADD_CIRCLE_OUTLINE" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:foo="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/floor_map"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/wvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            foo:navigationIcon="@drawable/backwhite" />
+
+        <WebView
+            android:id="@+id/s_mapvenue"
+            android:layout_below="@+id/wvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:padding="8dp"
+            android:textColor="#ff2d3143"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

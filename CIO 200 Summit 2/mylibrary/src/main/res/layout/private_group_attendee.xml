@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:sml="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff4f6fa"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <TextView android:id="@+id/alpha_header"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:text="A"
+        android:visibility="gone"
+        android:clickable="false"
+        android:textAllCaps="true"
+        android:fontFamily="@string/roboto_regular"
+        android:background="@color/light_gray"
+        android:textColor="@color/dark_gray"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+    <com.tubb.smrv.SwipeHorizontalMenuLayout
+        android:id="@+id/sml"
+        android:layout_below="@+id/alpha_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        sml:sml_scroller_interpolator="@android:anim/bounce_interpolator"
+        sml:sml_auto_open_percent="0.2"
+        sml:sml_scroller_duration="250">
+        <View
+            android:background="#dddddd"
+            android:layout_below="@+id/view_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <include
+            android:id="@id/smContentView"
+            layout="@layout/group_userlist" />
+
+        <include android:id="@id/smMenuViewLeft" layout="@layout/item_simple_left_menu"/>
+        <include android:id="@id/smMenuViewRight" layout="@layout/item_simple_right_menu"/>
+
+    </com.tubb.smrv.SwipeHorizontalMenuLayout>
+</RelativeLayout>

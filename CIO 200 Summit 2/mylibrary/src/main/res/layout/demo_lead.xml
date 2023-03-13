@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rootdemo"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/leftlead"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="4dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="185dp"
+            android:background="#008080" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:id="@+id/black"
+            android:layout_marginLeft="176dp"
+            android:src="@drawable/ic_lens_black_24dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="111dp"
+            android:layout_alignParentTop="true"
+            android:paddingRight="15dp"
+            android:src="@drawable/default_user" />
+
+
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:autoSizeMaxTextSize="15sp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeTextType="uniform"
+            android:text=""
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/score3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/sColorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="20"
+            android:textColor="#FFFF"></TextView>
+
+        <TextView
+            android:id="@+id/hash1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="210dp"
+            android:paddingLeft="7dp"
+            android:text=" #2"></TextView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

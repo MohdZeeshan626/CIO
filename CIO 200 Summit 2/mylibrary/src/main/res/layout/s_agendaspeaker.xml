@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newuibg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+    <ScrollView
+        android:id="@+id/mscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff4f6fa"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/speakerimage"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/default_speaker" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#fff4f6fa"
+                >
+
+
+                <TextView
+                    android:id="@+id/speakername"
+                    android:gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Dave Williams"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/profession"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/speakername"
+                    android:gravity="center_horizontal"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="Record-breaking Astronaut &amp; Aquanaut,CEO Southlake Regional Health Care"
+                    android:textColor="#8F9FA9"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ratingbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speakerbackground"
+                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_margin="10dp"
+                android:paddingRight="10dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/txtrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="marquee"
+                    android:paddingLeft="28dp"
+                    android:text="Rate this"
+                    android:fontFamily="@string/rubic_regular"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:singleLine="true" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/customRatingBar"
+                    android:layout_marginTop="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="22dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:isIndicator="true" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_margin="10dp"
+
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/des"
+                    android:linksClickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:paddingLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="dfsdfsdfdsfs"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/socialdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/newuibg"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/s1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="28dp"
+                    android:paddingStart="28dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:text="Contact Info"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/sociallinks"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sessiondetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/s2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="28dp"
+                    android:fontFamily="@string/rubic_regular"
+                    android:paddingTop="5dp"
+                    android:text="Sessions"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/sessionlist"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/pdfdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="28dp"
+                    android:paddingTop="15dp"
+                    android:text="Documents"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:id="@+id/documents"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+
+                    android:background="@drawable/speakerbackground"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginRight="9dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp">
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:paddingLeft="9dp"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/filesize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:layout_below="@+id/txtpdf"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

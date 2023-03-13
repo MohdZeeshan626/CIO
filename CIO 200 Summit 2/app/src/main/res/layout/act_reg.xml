@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:src="@drawable/close_blue" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Register"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                app:customFont="@string/roboto_regular_light" />
+
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/h3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:text="First Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: John"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/h4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fname"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Last Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: Duke"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black" />
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/h5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lname"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Mobile Number"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/mphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: 1234567890"
+                android:inputType="phone"
+                android:textColor="@color/black" />
+
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mphone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/temail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: johnduke@email.com"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/ph1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/password_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: abc123"
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
+
+
+            <com.webmobi.gecmedia.CustomViews.TxtVCustomFonts
+                android:id="@+id/ph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ph2"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/show"
+                android:text="Retype Password"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="eg: abc123"
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/act_button_border"
+                android:enabled="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="SIGN UP"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

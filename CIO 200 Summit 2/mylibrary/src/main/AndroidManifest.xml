@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.singleevent.sdk">
+
+    <uses-sdk tools:overrideLibrary="us.zoom.androidlib,us.zoom.videomeetings" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="TYPE_STEP_COUNT_CADENCE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:exported="true"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".View.LeftActivity.facebookModule.FaceBookActivity" />
+        <activity
+            android:name=".View.LeftActivity.linkedInModule.LinkedInPostsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.linkedInModule.LinkedInLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.linkedInModule.LinkedInMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.twitterModule.PostATweet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.twitterModule.TwitterAuthentication"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.twitterModule.TwitterSearch"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".View.LeftActivity.QuizModule.QuizResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.QuizModule.LoadQuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.QuizModule.QuizActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".View.LeftActivity.pollingActivities.PollingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.pollingActivities.PollingResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.LeftActivity.FeedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".View.LeftActivity.AgendaRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.WebViewDemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".health.Activity.PrivateChallenge"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".health.Activity.HealthFeature"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.Moodometer"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.AgendaDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".agora.openvcall.ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".agora.openvcall.ui.CallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.Streamlink"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LikeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.JoinMeeting"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.Video_Stream"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.ZoomMain"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.RightActivity.group_feed.GroupUploadPost"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.AgoraClass"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.AgoraMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LeadScore"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.VideoView"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.trelo.TreloHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.EditTextEx"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.VideoCapture"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LiveVideo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SharePost"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.AddCard"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.trelo.TreloBoard"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".agora.openvcall.ui.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".agora.openvcall.ui.CallOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".agora.openvcall.ui.NetworkTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SpeakerDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SpeakerRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SponsorRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SponsorDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SurveyRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.PollingRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.PollingItems"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.SocialMedaiRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.Attachment"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.AboutUs"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LinkedinProfile"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.MapRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.LeaderBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Fragment.Left_Fragment.floorimageview"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.Contact_Us"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.Attendee"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.Attendee_Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.MessageView"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.VideoActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.Notification"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.NotificationDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.TwitterHashTag"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".health.Activity.SeperateChallenge"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".health.Activity.Challengemode"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".health.Activity.ChallengeGoal"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".health.Activity.MainChallengeView"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--
+ <activity
+             android:name=".View.LeftActivity.Feeds"
+             android:hardwareAccelerated="true"
+             android:screenOrientation="portrait"
+             android:theme="@style/SingleAppTheme"
+             android:windowSoftInputMode="adjustResize|stateHidden" />
+        -->
+        <activity
+            android:name=".View.RightActivity.CreateGroup"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.FeedPostDemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.Group_feed"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.group_feed.Privategroup"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.MyGallery"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.FullScreenActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--
+         ATTENTION: This was auto-generated to add Google Play services to your project for
+         App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Receiver for twitter -->
+        <receiver
+            android:name=".service.MyResultReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.twitter.sdk.android.tweetcomposer.UPLOAD_SUCCESS" />
+                <action android:name="com.twitter.sdk.android.tweetcomposer.UPLOAD_FAILURE" />
+                <action android:name="com.twitter.sdk.android.tweetcomposer.TWEET_COMPOSE_CANCEL" />
+            </intent-filter>
+        </receiver> <!-- Right Activity -->
+        <activity
+            android:name=".View.RightActivity.MySchedule"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyAgendaDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyCompany"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyCompanyDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.Note"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.NotesDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyChat"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.ChangePwd"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.FeedPost"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyRequest"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyMeeting"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyQrCodeGeneratorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e37ae0dcb2dcab1a1a4378168b55682a37abe258" />
+
+        <activity
+            android:name=".gallery_camera.Gallery.GalleryActivity"
+            android:theme="@style/SingleAppTheme" />
+        <activity
+            android:name=".gallery_camera.Camera.CameraActivity"
+            android:theme="@style/SingleAppTheme" />
+        <activity
+            android:name=".View.RightActivity.AdminPanelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.SendNotification"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.ChooseDeviceIdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.report.ReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.report.ExhibitorReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.leadGeneration.ScanQrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.leadGeneration.ExhibitorLeadGenerationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.leadGeneration.AdminLeadGenerationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.leadGeneration.AddLeadManuallyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.checkin.SimpleScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.checkin.EventUsersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.LeftActivity.askAquestion.AskAQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.admin.checkin.RegisterEventUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".View.RightActivity.Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.GalleryVideo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.AdLandingWebview"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- Declaring Service in Manifest -->
+        <service
+            android:name=".service.UploadPost"
+            android:exported="false" />
+
+        <activity
+            android:name=".View.LeftActivity.SocialMediaView"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.adminSurvey.AdminSurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.adminSurvey.AdminSurveyRoot"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.MyProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.printsettings.PrintSettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.feedback.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.feedback.FeedbackDetails"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.bulkprinting.BulkPrintingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service android:name="com.minew.beaconplus.sdk.ConnectService" />
+        <service android:name="com.minew.beaconplus.sdk.services.DfuService" />
+
+        <receiver android:name="com.minew.beaconplus.sdk.receivers.BluetoothChangedReceiver"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".View.RightActivity.admin.beaconmanagement.RegisteredUserList"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.beaconmanagement.BMUserDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.beaconmanagement.DeviceList"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.checkin.beacon.BeaconCheckin"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.GalleryDemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.PollingQuestions"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.LivePollingDetail"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.RightActivity.admin.feeds.ui.FeedActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.LeftActivity.Feeds"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.LeftActivity.Feeds" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".View.RightActivity.group_feed.GroupFeedView"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.RightActivity.group_feed.GroupFeedView" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- zoom sdk -->
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.InitAuthSDKActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.MainWindow" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.APIUserStartJoinMeetingActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:theme="@style/ZMTheme.MainWindow"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.LoginUserStartJoinMeetingActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.EmailUserLoginActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.SSOUserLoginActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.otherfeatures.scheduleforloginuser.PreMeetingExampleActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.otherfeatures.scheduleforloginuser.ScheduleMeetingExampleActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/this_app_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.otherfeatures.MyInviteActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/invite_acitivity_name"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+            <intent-filter>
+                <action android:name="us.zoom.sdkexample.intent.action.MeetingInvite" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.otherfeatures.MyWaitJoinActivity"
+            android:icon="@drawable/ic_launcher"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+
+            <!--
+                            <intent-filter>
+                            <action android:name="us.zoom.sdkexample.intent.action.JoinBeforeHost" />
+                            <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.otherfeatures.MyCallMeByPhoneActivity"
+            android:icon="@drawable/ic_launcher"
+            android:exported="false"
+            android:theme="@style/ZMTheme.MainWindow">
+
+            <!--
+                            <intent-filter>
+                            <action android:name="us.zoom.sdkexample.intent.action.CallMyPhone" />
+                            <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.inmeetingfunction.customizedmeetingui.MyMeetingActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.MeetingSettingActivity"
+            android:configChanges="screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.inmeetingfunction.customizedmeetingui.RawDataMeetingActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity android:name=".zoommeet.main.java.us.zoom.sdksample.ui.QAActivity" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.BreakoutRoomsAdminActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.ui.BoEditActivity"
+            android:configChanges="screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name=".zoommeet.main.java.us.zoom.sdksample.inmeetingfunction.zoommeetingui.CustomZoomUIActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ZMTheme.SubWindow" /> <!-- Health app -->
+        <activity
+            android:name=".health.HistoryApiActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.JoinChallengeDetailsActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.ActivityHistory"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.ChallengeActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.LeaderBoardActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.JoinChallenge"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.ConfirmationChallengeActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.ChallengeDetailsActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.CreateChallengeActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.LineGraphActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.StepActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.HomeActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.PasswordActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.LoginwithnumberActivity"
+            android:theme="@style/Health" />
+        <activity
+            android:name=".health.Activity.MainActivityHealth"
+            android:theme="@style/Health" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+
+</manifest>

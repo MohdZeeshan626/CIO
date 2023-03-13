@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff4f6fa"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+
+<!--    <ScrollView
+        android:id="@+id/mscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fillViewport="true">
+
+
+
+
+    </ScrollView>-->
+    <RelativeLayout
+        android:layout_above="@+id/sponsor_ad_card_view"
+        android:layout_below="@+id/toolbar"
+        android:background="#fff4f6fa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/speakerbackground"
+            >
+
+            <EditText
+                android:id="@+id/attendee_search_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speakerbackground"
+                android:fontFamily="@string/rubic_regular"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:hint="  Search"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contains"
+            android:layout_below="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refrash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/search_view"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="-1dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sponsor_ad_card_view"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:elevation="42dp"
+        android:visibility="gone">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/sponsor_adsImage_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/nocompany"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+
+            android:src="@drawable/mycompany1"
+            android:id="@+id/mysimg"
+            />
+        <TextView
+            android:id="@+id/no1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mysimg"
+            android:layout_centerInParent="true"
+            android:fontFamily="@string/rubic_regular"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="No Favorites Yet!"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/no2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no1"
+            android:fontFamily="@string/rubic_regular"
+            android:layout_marginTop="7dp"
+            android:layout_centerInParent="true"
+            android:textColor="#B1B1B1"
+            android:gravity="center"
+            android:text="Tap below to add favorites"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/noitems"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mysimg"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="No Favorites Yet!"
+            android:textSize="22sp"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/mycombut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/no2"
+            android:paddingLeft="40dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/healthpostbut"
+            android:textAllCaps="false"
+            android:text="Start Exploring"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

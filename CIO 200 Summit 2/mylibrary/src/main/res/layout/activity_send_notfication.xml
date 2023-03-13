@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/newuibg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        foo:navigationIcon="@drawable/backwhite">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/newuibg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:text="Compose Message"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@color/green_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/rubic_regular"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_marginEnd="8dp"
+                    android:paddingLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/speakerbackground"
+                    android:hint="Message Title"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etTitle"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Message"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tvContent"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/speakerbackground"
+                    android:gravity="start"
+                    android:hint="Message Content to be pushed to all selected attendees."
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_Platforms_and_Receipts"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etContent"
+                    android:layout_marginTop="10dp"
+                    android:text="Platforms and Receipts"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_Platforms_and_Receipts"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_Platforms_and_Receipts">
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/radioGroup_PR"
+                        android:checkedButton="@id/radio_broadcast"
+                        android:layout_width="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radio_broadcast"
+                            android:fontFamily="@string/roboto_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/newui2nd"
+
+                            android:buttonTint="@color/newui2nd"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="  Broadcast" />
+
+                        <RadioButton
+                            android:id="@+id/radio_one_device"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/roboto_regular"
+                            android:textColor="@color/newui2nd"
+                            android:buttonTint="@color/newui2nd"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="  One Device" />
+
+                        <RadioButton
+                            android:id="@+id/radio_device_by_segment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/roboto_regular"
+                            android:buttonTint="@color/newui2nd"
+                            android:textColor="@color/newui2nd"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="  Device by Segment" />
+                    </RadioGroup>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/speakerbackground"
+                        android:layout_margin="2dp"
+                        android:gravity="right"
+                        android:layout_marginTop="2dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@color/gray"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/newui2nd">
+
+                    </Spinner>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_oneDevice"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/radioGroup_PR"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/notification_button_border"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Choose the DeviceId"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_device_bySegment"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_oneDevice"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/notification_button_border"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Select Segment Name"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_delivery_Schedule"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_Platforms_and_Receipts"
+                    android:layout_marginTop="10dp"
+                    android:text="Delivery Schedule"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_devlivery_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_delivery_Schedule">
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/radioGroup_DS"
+                        android:checkedButton="@id/radio_immediately"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radio_immediately"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/roboto_regular"
+                            android:buttonTint="@color/newui2nd"
+                            android:textColor="@color/newui2nd"
+                            android:onClick="onDeliveryScheduleRadioButtonClicked"
+                            android:text="  Immediately" />
+
+                        <RadioButton
+                            android:id="@+id/radio_schedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/roboto_regular"
+                            android:buttonTint="@color/newui2nd"
+                            android:textColor="@color/newui2nd"
+                            android:onClick="onDeliveryScheduleRadioButtonClicked"
+                            android:text="  Schedule" />
+                    </RadioGroup>F
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_schedule"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:layout_below="@+id/radioGroup_DS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <RelativeLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/rectanglebackground"
+                                android:fontFamily="@string/roboto_regular"
+                                android:onClick="calendarClick"
+                                android:padding="5dp"
+                                android:text="DD-MM-YYYY"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/tvHour"
+                                android:text="H"
+                                android:layout_toRightOf="@+id/tvDate"
+                                android:textSize="16sp"
+                                android:focusable="false"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:background="@drawable/rectanglebackground"
+                                android:layout_width="50dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@string/roboto_regular"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv_colon"
+                                android:text=":"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_toRightOf="@+id/tvHour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tvMinute"
+                                android:text="M"
+                                android:fontFamily="@string/roboto_regular"
+                                android:gravity="center"
+                                android:focusable="false"
+                                android:padding="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:background="@drawable/rectanglebackground"
+                                android:layout_toRightOf="@+id/tv_colon"
+                                android:layout_toEndOf="@+id/tv_colon"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content" />
+                            <Spinner
+                                android:id="@+id/spinner_time"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/tvMinute"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/tvMinute"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </Spinner>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_devlivery_schedule"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/btnSend"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/healthpostbut"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:textAllCaps="false"
+                        android:layout_marginRight="50dp"
+                        android:padding="10dp"
+                        android:text="Send"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

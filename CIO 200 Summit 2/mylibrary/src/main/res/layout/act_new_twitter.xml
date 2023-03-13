@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        foo:navigationIcon="@drawable/backwhite"
+        />
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:background="@color/m_light_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="#Tag"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_hashtag_head"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Capture"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:background="@color/m_light_blue"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/ivCompose"
+            android:id="@+id/camera_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/ivCompose"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </RelativeLayout>
+
+    <!-- Image view to show picked/captured image -->
+    <ImageView
+        android:id="@+id/picked_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#EEEEEE"
+        android:onClick="triggerPickImageTask"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        />
+
+
+    <!-- Buttons to share image via Twitter Composer and Twitter Native Composer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/m_light_blue"
+            android:onClick="shareUsingTwitterComposer"
+            android:text="Twitter Share"
+            android:id="@+id/btn_share"
+            android:visibility="visible"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+           android:visibility="gone"
+            android:background="@color/m_light_blue"
+            android:fontFamily="@string/roboto_regular"
+            android:onClick="shareUsingTwitterNativeComposer"
+            android:text="Twitter Share"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

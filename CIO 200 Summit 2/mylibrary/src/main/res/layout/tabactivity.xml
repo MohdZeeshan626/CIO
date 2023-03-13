@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/homescreen_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:background="@color/homescreen_bg"
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <LinearLayout
+                        android:id="@+id/abc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="none"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:fontFamily="@font/roboto_slab_bold"
+                            android:text="YOUR ACTIVITY"
+                            android:textSize="15sp"/>
+                        <FrameLayout
+                            android:id="@+id/frameLayout_horizontalrecyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp">
+
+                        </FrameLayout>
+
+                        <Button
+                            android:id="@+id/btn_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:text="View Activity Insights"/>
+
+                        <LinearLayout
+                            android:id="@+id/linearChallenge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingTop="35dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_margin="15dp"
+                            android:fontFamily="@font/roboto_slab_bold"
+                            android:text="@string/challenges"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                            <Button
+                                android:id="@+id/joinbtn_create"
+                                android:layout_width="140dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="15dp"
+                                android:textAllCaps="false"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/healthbutton"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="+ Join/Create"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearTab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+                            <TextView
+                                android:id="@+id/txtactive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="ACTIVE"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/txtupcomingg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginLeft="15dp"
+
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="UPCOMING"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="0"
+                                android:textColor="@color/black"
+
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/txtcompleted"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="COMPLETED"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearTab"
+                    android:background="#1db995"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_below="@id/collapse"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bottom_app_bar"
+        style="@style/Health"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/white"
+        android:background="?android:attr/windowBackground"
+        app:fabAlignmentMode="center" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            app:elevation="6dp"
+            android:background="?android:attr/windowBackground"
+            android:backgroundTint="@color/white"
+
+            app:menu="@menu/bottom_navigation" />
+
+    </FrameLayout>
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:onClick="onFabClicked"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/homescreen_btn"
+        app:fabSize="auto"
+        app:layout_anchor="@+id/bottom_app_bar"
+        app:layout_anchorGravity="center|top" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
+
+
+<!--Coordinatior layout as root-->
+
+<!--<com.google.android.material.appbar.AppBarLayout-->
+<!--android:id="@+id/appbar"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="300dp">-->
+<!--<com.google.android.material.appbar.CollapsingToolbarLayout-->
+    <!--android:id="@+id/collapsing_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+    <!--app:contentScrim="?attr/colorPrimaryDark"-->
+    <!--app:title="@string/app_name"-->
+    <!--app:expandedTitleMarginStart="48dp"-->
+    <!--app:expandedTitleMarginEnd="64dp">-->
+
+
+    <!--<androidx.appcompat.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--app:layout_collapseMode="parallax" />-->
+
+<!--</com.google.android.material.appbar.CollapsingToolbarLayout>-->
+
+
+
+<!--</com.google.android.material.appbar.AppBarLayout>-->
+
+<!--<com.google.android.material.tabs.TabLayout-->
+
+<!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--android:id="@+id/tabLayout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:background="#1db995"-->
+    <!--/>-->
+
+
+<!--<androidx.viewpager.widget.ViewPager-->
+<!--android:layout_marginTop="300dp"-->
+<!--android:id="@+id/viewPager"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_below="@id/tabLayout"-->
+    <!--/>-->
+<!--end of coordinator layout-->

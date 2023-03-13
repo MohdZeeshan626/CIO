@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="50dp" android:height="50dp">
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval"
+            >
+            <!-- The fill color -->
+            <solid android:color="#ff9627ea" />
+            <!-- Just to add a border -->
+            <stroke
+                android:color="#ffffffff"
+                android:width="0dp"
+                />
+            <size
+                android:width="50dp"
+                android:height="50dp" />
+        </shape>
+    </item>
+</selector>

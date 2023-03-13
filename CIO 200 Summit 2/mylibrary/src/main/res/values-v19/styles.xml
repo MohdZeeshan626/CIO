@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+        <style name="SingleAppTheme" parent="SingleAppBaseTheme">
+                <item name="android:textColorPrimary">@color/white</item>
+                <item name="android:windowBackground">@color/base</item>
+                <item name="android:textColorHint">@color/gray</item>
+                <item name="android:typeface">serif</item>
+                <item name="android:windowContentOverlay">@null</item>
+                <item name="windowActionBar">false</item>
+                <item name="windowNoTitle">true</item>
+                <item name="android:windowSoftInputMode">stateHidden</item>
+                <!-- Toolbar Theme / Apply white arrow -->
+                <item name="colorControlNormal">@color/white</item>
+
+                <!-- Material Theme -->
+                <item name="colorPrimary">@color/sColorPrimary</item>
+                <item name="colorPrimaryDark">@color/sColorPrimaryDark</item>
+                <item name="colorAccent">@color/sColorPrimary</item>
+
+                <item name="android:statusBarColor" tools:targetApi="21">@color/status_bar</item>
+                <item name="android:navigationBarColor" tools:targetApi="21">@color/navigation_bar
+                </item>
+                <item name="android:windowTranslucentStatus">false</item>
+                <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="21">true
+                </item>
+        </style>
+    <style name="VideoCallTheme" parent="SingleAppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="L1Text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="L2Text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="L2TextDark">
+        <item name="android:textColor">@color/dark_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="L2TextWhite">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="L2TextInputHint">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NotificationUIText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowColor">@color/transparent_75_white</item>
+    </style>
+
+
+    <style name="s_MaterialDialogSheet" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/MaterialDialogSheetAnimation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ffffff">
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:visibility="gone"
+                    foo:awesome_font="pixeden_stroke"
+                    foo:awesome_icon="PE_CLOSE" />
+
+                <ImageView
+                    android:id="@+id/mylogo"
+                    android:layout_width="255dp"
+                    android:layout_height="120dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/img"
+                    android:layout_marginBottom="69dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="5dp"
+                    android:text="WebMOBI"
+                    android:textColor="#ff9627ea"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+            android:id="@+id/googleplus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="64dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="visible">
+
+
+            <!--  <cyd.awesome.material.AwesomeText
+                android:id="@+id/a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                foo:awesome_font="font_awesome"
+                foo:awesome_icon="G" />
+-->
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="316dp"
+                android:layout_height="46dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="29dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Password"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/nextemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/sigin_in"
+                    android:layout_width="105dp"
+                    android:layout_height="29dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="81dp"
+                    android:background="#ff9627ea"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginRight="110dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:text="Don't have an account? Sign Up"
+                android:textColor="#2c2738"></TextView>
+
+
+            <RelativeLayout
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="16dp"
+                android:background="#3B579D"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="13sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_FACEBOOK_F" />
+
+
+                <TextView
+                    android:id="@+id/txtfac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/a2"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Connect with Facebook"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="16dp"
+                android:background="#007BB6"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_LINKEDIN" />
+
+
+                <TextView
+                    android:id="@+id/txtlink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/a1"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Connect with Linkedin"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_ENVELOPE_O" />
+
+
+                <TextView
+                    android:id="@+id/txtemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/a3"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Create Account"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:padding="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:text="OR"
+                android:textColor="#ff2c2738"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/d1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/rounded_bg_home"
+                android:fontFamily="@font/roboto_medium"
+                android:text=" Demo Event "
+                android:textAllCaps="false"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/d22"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/rounded_bg_home"
+                android:fontFamily="@font/roboto_medium"
+                android:text=" Demo Virtual Event "
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:textColor="#ffffffff" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

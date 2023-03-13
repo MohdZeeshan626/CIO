@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    tools:context="com.singleevent.sdk.agora.openvcall.ui.CallActivity">
+
+    <com.singleevent.sdk.agora.openvcall.ui.layout.GridVideoViewContainer
+        android:id="@+id/grid_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ViewStub
+        android:id="@id/small_video_view_dock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:inflatedId="@id/small_video_view_dock"
+        android:layout="@layout/small_video_view_dock" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/controlbutton"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <com.singleevent.sdk.agora.propeller.ui.AGLinearLayout
+            android:id="@+id/extra_ops_container"
+            android:layout_width="48dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:onClick="onSwitchCameraClicked"
+                android:visibility="visible"
+                android:scaleType="center"
+                android:src="@drawable/btn_switch_camera_white" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:onClick="onMixingAudioClicked"
+                android:visibility="gone"
+                android:scaleType="center"
+                android:src="@drawable/btn_audio_mixing_off" />
+
+        </com.singleevent.sdk.agora.propeller.ui.AGLinearLayout>
+
+        <com.singleevent.sdk.agora.propeller.ui.AGLinearLayout
+            android:id="@+id/bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/topcorner"
+                android:id="@+id/bottom_cont"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/bottom_action_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="minimiseChat"
+                        android:src="@drawable/message" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20" />
+
+
+                    <ImageView
+                        android:id="@id/switch_speaker_id"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="onSwitchSpeakerClicked"
+                        android:src="@drawable/audio" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="onHangupClicked"
+                        android:src="@drawable/reject" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="onVideoMuteClicked"
+                        android:src="@drawable/mutevideo" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:onClick="onVoiceMuteClicked"
+                        android:src="@drawable/microphone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/msg_input_container"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/dark_black"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    android:onClick="onClickHideIME"
+                    android:scaleType="center"
+                    android:src="@drawable/btn_keyboard_hide" />
+
+                <EditText
+                    android:id="@+id/msg_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/msg_say_something"
+                    android:imeActionLabel="@string/label_send"
+                    android:imeOptions="actionSend"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.singleevent.sdk.agora.propeller.ui.AGLinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/msg_list"
+            android:visibility="gone"
+            android:layout_width="272dp"
+            android:layout_height="144dp"
+            android:layout_above="@id/bottom_container" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_below="@id/controlbutton"
+        android:visibility="gone"
+        android:background="#ffffffff"
+        android:id="@+id/mainview"
+        >
+
+        <LinearLayout
+            android:id="@+id/chat_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/chatedit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="68dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="discussChat"
+                android:text="Discussion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/quesedit"
+                android:layout_weight="1"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="68dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="questionAsk"
+                android:text="Question"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <!--
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/chat_switch"
+                    android:id="@+id/products_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_above="@+id/sendchat"
+
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+        -->
+
+
+        <ListView
+            android:id="@+id/chat_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/amsg"
+            android:layout_below="@+id/chat_switch"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dip"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            tools:listitem="@layout/message_right" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="2dp"
+            android:id="@+id/amsg"
+            android:paddingBottom="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/newuibg"
+            android:paddingLeft="10dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/sendchat"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginRight="65dp"
+                android:layout_marginLeft="5dp"
+                android:hint="Send Message..."
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"></EditText>
+
+            <ImageView
+                android:id="@+id/sendmsg"
+                android:layout_width="45dp"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+
+                android:background="@drawable/healthimagecircle"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:onClick="sendMessage"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/rightarrow"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:visibility="gone"
+            android:layout_below="@id/controlbutton"
+
+            android:background="#ffffffff"
+            android:id="@+id/mainview1"
+            >
+            <LinearLayout
+                android:id="@+id/chat_switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/chatedit1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="68dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:background="@drawable/rect_backg_without_corner"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:onClick="discussChat"
+                    android:text="Discussion"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quesedit1"
+                    android:layout_weight="1"
+                    android:fontFamily="@string/roboto_regular"
+                    android:background="@drawable/rect_backg_without_corner"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="68dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+
+                    android:onClick="questionAsk"
+                    android:text="Question"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear1st"
+                android:layout_below="@+id/chat_switch1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Ask A Question"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_gray"
+                    android:visibility="visible"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Vote up for your fav question or Ask a question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginBottom="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_marginTop="5dp"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/addYourQues"
+                android:textSize="16sp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginRight="68dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="39dp"
+                android:elevation="2dp"
+                android:minHeight="35dp"
+                android:fontFamily="@string/roboto_regular"
+                android:drawablePadding="25dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/questionmark1"
+                android:textColor="@color/white"
+                android:background="@drawable/rectanglebackground"
+                android:text="Ask a Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</FrameLayout>

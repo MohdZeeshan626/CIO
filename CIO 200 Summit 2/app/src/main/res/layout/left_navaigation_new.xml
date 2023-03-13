@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back_img"
+            android:text="webMOBI Home"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v1">
+
+        <ImageView
+            android:id="@+id/coverimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.3" />
+
+
+        <RelativeLayout
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/webmobilogo"
+              />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/logo">
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/eventtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="12dp"
+                    android:text="CURRENT SPACE"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:customFont="@string/roboto_regular_light" />
+
+
+                <TextView
+                    android:id="@+id/eventlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eventtitle"
+                    android:layout_toRightOf="@+id/marker"
+                    android:fontFamily="@string/roboto_regular_light"
+                    android:singleLine="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="webMOBI"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_800"
+                    android:textIsSelectable="true"
+                    android:textSize="22sp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llpreview"
+        android:layout_below="@+id/v2"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:background="@color/m_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="You are in preview mode"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:visibility="gone"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textIsSelectable="true"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:id="@+id/v3nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:src="@drawable/webmobilogo"
+                android:layout_height="100dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/logo">
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/eventtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:text="CURRENT SPACE"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    app:customFont="@string/roboto_regular_light" />
+
+
+                <TextView
+                    android:id="@+id/eventoname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eventtitle"
+                    android:layout_toRightOf="@+id/marker"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:text="webMOBI"
+                    android:textStyle="bold"
+                    android:focusable="true"
+                    android:textColorHighlight="@color/grey_800"
+                    android:focusableInTouchMode="true"
+                    android:textIsSelectable="true"
+                    android:freezesText="true"
+                    android:textFontWeight="10dp"
+                    android:textColor="@color/grey_800"
+                    android:textSize="25dp"
+                    android:fontFamily="@string/roboto_regular_light" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>-->

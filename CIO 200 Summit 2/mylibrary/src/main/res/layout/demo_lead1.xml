@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rightlead"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/rline"
+            android:layout_width="4dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="185dp"
+            android:background="#008080" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:id="@+id/black1"
+            android:layout_marginLeft="176dp"
+            android:src="@drawable/ic_lens_black_24dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rimage_view3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/rline"
+            android:paddingLeft="15dp"
+            android:src="@drawable/default_user" />
+
+        <TextView
+            android:id="@+id/rname3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rimage_view3"
+            android:layout_marginTop="12dp"
+            android:autoSizeMaxTextSize="15sp"
+            android:paddingLeft="5dp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeTextType="uniform"
+            android:text="Danny Mille"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/rscore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rimage_view3"
+            android:layout_marginStart="280dp"
+            android:background="@color/sColorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="250"
+            android:textColor="#FFFF"></TextView>
+
+        <TextView
+            android:id="@+id/hash2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="130dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=" #2"></TextView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

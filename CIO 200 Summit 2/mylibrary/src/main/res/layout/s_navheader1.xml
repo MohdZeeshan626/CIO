@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="290dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="230dp">
+    <ImageView
+        android:id="@+id/lbannerimage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="fitXY"
+        android:background="#ff9627ea"
+        android:src="@drawable/lefthome"
+         />
+
+    <RelativeLayout
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#80000000"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/backwhite" />
+
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@+id/back_img"
+            android:text="Apps"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_gravity="bottom|center"
+        android:id="@+id/v2"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/speakerbackground"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/llogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            android:src="@drawable/challengeimg"
+            android:textColor="#ff9627ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ff2d3142"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_marginRight="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/eventtitle"
+            android:layout_below="@+id/llogo"
+            android:text="Employee engagement"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

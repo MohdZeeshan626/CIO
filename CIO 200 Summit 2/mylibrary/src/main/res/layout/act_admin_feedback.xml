@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite"
+        foo:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_checkInternet"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@string/roboto_regular"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:text="Can't connect to network. Please, check your internet connection"
+                android:background="@color/m_orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Select attendee to start Feedback"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bottom_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:hint="Search here..."
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </RelativeLayout>
+        <Spinner
+            android:id="@+id/section_list_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/radioSurvey"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User  "
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_anonymous"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anonymous" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:id="@+id/attendee_fl"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/attendeeView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swiperefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/userlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:divider="@color/light_gray"
+                        android:dividerHeight="0dp" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <TextView
+                    android:id="@+id/noitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="No attendees available"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/feedbackView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvHeadingFeedback"
+                    android:text="Feedback"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:background="@color/sColorAccent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
+                <TextView
+                    android:id="@+id/tv_ques"
+                    android:layout_below="@+id/tvHeadingFeedback"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:text="Question ans "
+                    android:maxLines="4"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                   android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/view_lead_generation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="20dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp">
+
+                            <LinearLayout
+
+                                android:id="@+id/linearlayout2_1st"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/ivsmiling"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:background="@drawable/smiling" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Satisfied"
+                                        android:fontFamily="@string/roboto_regular"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/ivnetural"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:background="@drawable/confused" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Neutral"
+                                        android:fontFamily="@string/roboto_regular"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_sad"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:background="@drawable/sad" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Not Satisfied"
+                                        android:fontFamily="@string/roboto_regular"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <include
+                android:id="@+id/vtryagain"
+                layout="@layout/s_tryagain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_shadow"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:id="@+id/tv_start"
+        android:text="START"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:fontFamily="@string/roboto_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

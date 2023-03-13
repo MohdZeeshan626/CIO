@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.Activity.ConfirmationChallengeActivity">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="#fff4f6fa"
+       android:layout_height="match_parent">
+       <FrameLayout
+
+           android:id="@+id/fragmentContainer"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_check_circle_black_24dp"/>
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:textColor="#ff2d3142"
+            android:textSize="18sp"
+            android:text="Challenge successfully created!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="15dp"
+            android:background="#e8ebf2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></View>
+
+        <TextView
+
+           android:layout_margin="15dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:textColor="@color/black"
+            android:id="@+id/cname"
+            android:textSize="24sp"
+            android:text="Office Workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#ff9c9eb9"
+            android:textSize="14sp"
+            android:text="Stay Motivated and win the challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="97dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:background="@drawable/roundedittext"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/steps" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Be the person with the most steps by challenge end"
+                android:textColor="@color/dark_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_date_range_black_24dp"/>
+
+            <TextView
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/startend"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="Jun 09, 2020 - Jun 15, 2020"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_group" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Limit 10 people per challenge"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_mail_outline_black_24dp"/>
+
+            <TextView
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="Invite Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+
+            android:padding="5dp"
+            android:hint="Invite link "
+            android:background="@drawable/roundedittext"
+            android:maxLength="38"
+            android:id="@+id/ed_challengeName"
+            android:layout_margin="25dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_marginTop="15dp"
+            android:background="#e8ebf2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></View>
+
+        <Button
+            android:layout_margin="15dp"
+            android:id="@+id/btn_invitefrnds"
+            android:layout_gravity="center_horizontal"
+            android:text="Invite Friends"
+            android:textColor="@color/white"
+            android:background="@drawable/healthbutton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_done"
+            android:layout_gravity="center_horizontal"
+            android:text="Done"
+            android:textSize="11sp"
+            android:textColor="#ff727272"
+            android:background="@drawable/healthdone"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+   </RelativeLayout>
+</ScrollView>

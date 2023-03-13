@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.Activity.CreateChallengeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="25dp"
+                android:textSize="22sp"
+                android:text="Choose your duration and start date"
+                android:fontFamily="@string/roboto_regular_bold"
+                android:gravity="center"
+                android:textColor="#ff2d3142"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#e8ebf2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></View>
+
+            <TextView
+                android:layout_margin="20dp"
+                android:fontFamily="@string/rubic_regular"
+                android:textColor="#ff2d3142"
+                android:textSize="17sp"
+                android:text="Challenge Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto_slab"
+                android:layout_marginBottom="10dp"
+                android:text="Challenges are limited to 31 days or less."
+                android:textColor="#ff9c9eb9"
+                android:textSize="12sp" />
+
+            <View
+                android:background="#e8ebf2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="2dp"></View>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/healthdatelayout">
+
+
+            <Spinner
+                android:id="@+id/spinnerDays"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:outlineSpotShadowColor="@color/home_blue"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"></Spinner>
+            </FrameLayout>
+
+            <View
+                android:layout_marginTop="15dp"
+                android:background="#e8ebf2"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"></View>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="17sp"
+                    android:textColor="#ff2d3142"
+                    android:fontFamily="@string/rubic_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"/>
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#ff8b8b8b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/roboto_slab"
+                android:textColor="#ff9c9eb9"
+                android:textSize="12sp"
+                android:text="Start date must be within the next 60 days."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/date_picker"
+                android:text="Set Date"
+                android:textColor="#ff8b8b8b"
+                android:textAllCaps="false"
+                android:background="@drawable/roundedittext"
+                android:layout_margin="20dp"
+                android:layout_width="140dp"
+                android:textSize="14sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/healthbutton"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

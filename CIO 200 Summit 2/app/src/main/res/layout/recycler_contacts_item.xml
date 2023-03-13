@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <ImageView
+        android:id="@+id/iv_scanCard"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/alpha_j"
+        />
+    <LinearLayout
+        android:id="@+id/ll_1st"
+        android:orientation="vertical"
+        android:gravity="start|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_scanCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name:"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginStart="16sp"
+           />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Description:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginLeft="16sp"
+            android:layout_marginStart="16dp"
+            />
+    </LinearLayout>
+
+   <View
+
+       android:layout_below="@+id/iv_scanCard"
+       android:layout_marginTop="10dp"
+       android:background="#eeeeee"
+       android:layout_width="match_parent"
+       android:layout_height="6dp"/>
+</RelativeLayout>

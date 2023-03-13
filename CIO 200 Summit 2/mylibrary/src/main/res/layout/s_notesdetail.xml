@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Note"
+            android:linksClickable="true"
+            android:autoLink="web|email"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:fontFamily="@string/roboto_regular"
+             />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deletenode"
+            android:src="@drawable/ic_delete_black_36dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/title"
+             />
+
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:awesome_font="pixeden_stroke"
+            app:awesome_icon="PE_CLOSE" />
+
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:awesome_font="pixeden_stroke"
+            app:awesome_icon="PE_DISKETTE" />
+
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/h1"
+        android:layout_margin="10dp"
+        android:background="@drawable/s_aboutborder"
+        android:fontFamily="@string/roboto_regular"
+        android:gravity="top"
+        android:hint="Enter the Notes"
+        android:padding="5dp"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:weightSum="2"
+        android:padding="2dp"
+        android:background="@drawable/rect_backg_without_corner"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:padding="2dp"
+            android:layout_weight="1"
+            android:text="Full Agenda"
+            android:id="@+id/btn_fullagenda"
+            android:layout_width="0dp"
+           android:minHeight="40dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_height="wrap_content" />
+        <Button
+            android:padding="2dp"
+            android:id="@+id/btn_myschedule"
+            android:layout_weight="1"
+            android:text="My Agenda"
+            android:minHeight="40dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r11"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/ll_buttons"
+        android:background="@drawable/speakerbackground"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/monthofevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="April 2017"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:fontFamily="@string/roboto_regular"/>
+
+    <HorizontalScrollView
+        android:id="@+id/hor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monthofevent"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/sch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+</RelativeLayout>
+<!--<android.support.v4.widget.SwipeRefreshLayout
+
+    android:id="@+id/agenda_refresh"
+    android:layout_below="@+id/hor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
+
+    <FrameLayout
+        android:id="@+id/realTabContent"
+        android:layout_below="@+id/r11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:clickable="true" />
+<!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+
+    <LinearLayout
+        android:id="@+id/fabLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_newConv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:fontFamily="@string/roboto_regular"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="SORT BY CATEGORY"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fabLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_newConv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="SORT BY TIME"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            foo:srcCompat="@drawable/filter_white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

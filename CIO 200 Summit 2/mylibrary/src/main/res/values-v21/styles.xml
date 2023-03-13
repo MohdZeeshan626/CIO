@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SingleAppTheme" parent="SingleAppBaseTheme">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/base</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <!-- Toolbar Theme / Apply white arrow -->
+        <item name="colorControlNormal">@color/white</item>
+
+        <!-- Material Theme -->
+        <item name="colorPrimary">@color/sColorPrimary</item>
+        <item name="colorPrimaryDark">@color/sColorPrimaryDark</item>
+        <item name="colorAccent">@color/sColorPrimary</item>
+
+        <item name="android:statusBarColor" tools:targetApi="21">@color/status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/navigation_bar
+        </item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="21">true
+        </item>
+    </style>
+</resources>

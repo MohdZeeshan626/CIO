@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:awesome_font="material_design"
+                app:awesome_icon="MD_ARROW_BACK" />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:text="Log in"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/logo" />
+
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/h2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="First Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@string/roboto_regular"
+            android:background="@drawable/act_edittextback"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black" />
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Last Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@string/roboto_regular"
+            android:background="@drawable/act_edittextback"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black" />
+
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+        <EditText
+            android:id="@+id/temail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@string/roboto_regular"
+            android:background="@drawable/act_edittextback"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black" />
+
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Mobile Number"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+        <EditText
+            android:id="@+id/mphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/act_edittextback"
+            android:inputType="phone"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/black" />
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Job position"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+        <EditText
+            android:id="@+id/jobpos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@string/roboto_regular"
+            android:background="@drawable/act_edittextback"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black" />
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Company"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:customFont="@string/roboto_regular" />
+
+        <EditText
+            android:id="@+id/company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@string/roboto_regular"
+            android:background="@drawable/act_edittextback"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/signup"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/act_button_border"
+            android:padding="12dp"
+            android:text="SIGN UP"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

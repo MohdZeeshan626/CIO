@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/newuibg"
+    xmlns:foo="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        foo:navigationIcon="@drawable/backwhite"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/view1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_checkInternet"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@string/roboto_regular"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:text="@string/can_t_connect_to_network_please_check_your_internet_connection"
+            android:background="@color/m_orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:id="@+id/rl1st"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/speakerbackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_profile"
+            android:background="@drawable/round_user"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/default_user"
+            android:layout_width="62dp"
+            android:layout_height="65dp" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_profile"
+            android:id="@+id/tv_user_name"
+            android:text="ttt"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingLeft="33dp"
+            android:textStyle="bold"
+            android:fontFamily="@string/roboto_regular"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/user_leadcount"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/user_leadcount"
+            android:textSize="14sp"
+            android:text="50"
+            android:minHeight="25dp"
+            android:minWidth="55dp"
+            android:layout_marginLeft="27dp"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:background="#ffffffff"
+        android:paddingLeft="20dp"
+        android:paddingTop="6dp"
+        android:layout_marginTop="18dp"
+        android:paddingBottom="5dp"
+        android:text="Top Scorers"
+
+        android:textColor="#ff7c7c7c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_no_items"
+                android:text="No Activity from attendee"
+                android:textSize="16sp"
+                android:fontFamily="@string/roboto_regular"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

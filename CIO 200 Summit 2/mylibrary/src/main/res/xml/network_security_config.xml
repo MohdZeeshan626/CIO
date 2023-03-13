@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Pin the domain www.webmobi.com -->
+    <!-- Official Android N API -->
+    <domain-config>
+        <domain includeSubdomains="true" >webmobi.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">3ZQxtVjWsRuMvhza8IJ9JpP3/mgMJa1zysjDZmBZTSA=</pin>
+            <pin digest="SHA-256">x9SZw6TwIqfmvrLZ/kz1o0Ossjmn728BnBKpUFqGNVM=</pin>
+        </pin-set>
+        <!-- Do not enforce pinning validation -->
+        <trustkit-config enforcePinning="true">
+            <!-- Add a reporting URL for pin validation reports -->
+          <!--  <report-uri>https://www.webmobi.com/</report-uri>-->
+        </trustkit-config>
+    </domain-config>
+  <!--  <debug-overrides>
+        <trust-anchors>
+            &lt;!&ndash; For debugging purposes, add a debug CA and override pins &ndash;&gt;
+            <certificates overridePins="true" src="@raw/keystore" />
+        </trust-anchors>
+    </debug-overrides>-->
+</network-security-config>

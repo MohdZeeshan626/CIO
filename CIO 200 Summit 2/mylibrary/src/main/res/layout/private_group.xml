@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite">
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/t1"
+            android:layout_marginLeft="45dp"
+            android:layout_height="wrap_content"
+            android:text="Attendee List"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />-->
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/attendee_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="#fff4f6fa"
+        android:layout_above="@+id/atendee_ad_card_view"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_checkInternet"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@string/roboto_regular"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:text="@string/can_t_connect_to_network_please_check_your_internet_connection"
+                android:background="@color/m_orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                >
+
+                <EditText
+                    android:id="@+id/attendee_search_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/zm_ui_kit_btn_round_white_gray_border"
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:fontFamily="@string/roboto_regular_bold"
+                    android:hint="Search by name and title"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#ff8b8b8b" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff4f6fa"
+                    android:divider="@color/light_gray"
+                    android:dividerHeight="0dp" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/noitems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@string/roboto_regular"
+                android:gravity="center"
+                android:text="No attendees available"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/vtryagain"
+            layout="@layout/s_tryagain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/atendee_ad_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:elevation="42dp"
+        android:background="#fff4f6fa"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/selectdone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/zm_width_50dp"
+            android:layout_marginRight="@dimen/zm_width_50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/healthbutton"
+            android:padding="4dp"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"></Button>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

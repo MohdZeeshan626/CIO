@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#0a6a99</color>-->
+    <!--<color name="colorPrimaryDark">#1998be</color>-->
+    <color name="colorPrimary">#237be9</color>
+    <color name="colorPrimaryDark">#1f6ccc</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="linkedinColor">#007ab9</color>
+    <color name="black">#000000</color>
+    <color name="homescreendefault">#5a249d</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="spots_dialog_color">@android:color/holo_blue_dark</color>
+    <color name="iron">#BCBCBC</color>     <!-- TextView shadow offsets do not respect scale. -->
+    <color name="lightgray">#bab8b8</color>
+    <color name="semi_transparent">#33000000</color>
+    <color name="gray">#787776</color>
+    <color name="gray_light">#cccccc</color>
+    <color name="alphagray">#32787776</color>
+    <color name="alphawhite">#32ffffff</color>
+    <color name="transparent_blue_discovery">#0B6D9A</color>
+    <color name="Background_bottom_sheet">#FFFFFF</color>
+    <color name="InactiveBottomNavIconColor" >#cca7caf6</color>
+    <color name="home_background">#f2f2f2</color>
+    <color name="home_blue">#F814A7</color>
+    <color name="mytheme">#F814A7</color>
+
+    <!-- Screens background color-->
+    <color name="bg_slider_screen1">#f4b241</color>
+    <color name="bg_slider_screen2">#16bc7d</color>
+    <color name="bg_slider_screen3">#203d8c</color>
+    <!-- dots inactive colors -->
+    <color name="dot_inactive_screen1">#32787776</color>
+    <color name="dot_inactive_screen2">#32787776</color>
+    <color name="dot_inactive_screen3">#32787776</color>
+    <color name="dot_inactive_screen4">#32787776</color>
+    <!-- dots active colors -->
+    <color name="dot_active_screen1">#787776</color>
+    <color name="dot_active_screen2">#787776</color>
+    <color name="dot_active_screen3">#787776</color>
+    <color name="dot_active_screen4">#787776</color>
+    <array name="array_dot_active">
+        <item>@color/dot_active_screen1</item>
+        <item>@color/dot_active_screen2</item>
+        <item>@color/dot_active_screen3</item>
+        <item>@color/dot_active_screen4</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive_screen1</item>
+        <item>@color/dot_inactive_screen2</item>
+        <item>@color/dot_inactive_screen3</item>
+        <item>@color/dot_inactive_screen4</item>
+    </array>
+</resources>

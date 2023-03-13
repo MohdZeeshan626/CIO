@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    new -->
+    <color name="theme2">#48465d</color>
+    <color name="disable">#e9edf5</color>
+    <color name="grey">#E9EAEE</color>
+    <color name="dark_grey">#9d9d9d</color>
+    <!--    new end-->
+    <color name="sColorPrimary">#0883ad</color>
+    <color name="sColorPrimaryDark">#000000</color>
+    <color name="linkedinColor">#007ab9</color>
+    <color name="sColorAccent">#FF4081</color>
+    <color name="borderformain">#FFA1A4A6</color>
+    <color name="white">#ffffff</color>
+    <color name="light_white">#ffffff</color>
+    <color name="alpha_white">#deffffff</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="black">#000000</color>
+    <color name="dark_gray">#7b7769</color>
+    <color name="base">@color/lightgray</color>
+    <color name="lightgray">#fafaf5</color>
+    <color name="gray">#a3a090</color>
+    <color name="status_bar">@color/sColorPrimaryDark</color>
+    <color name="navigation_bar">@android:color/black</color>
+    <color name="InactiveBottomNavIconColor">#cca7caf6</color>
+    <color name="creem">#fdfdfd</color>
+    <color name="light_gray">#E1E1E1</color>
+    <color name="semilightgray">#f2f0f0</color>
+    <color name="semi_transparent">#33000000</color>
+    <color name="iron">#BCBCBC</color>
+    <color name="off_white">#fffafafa</color>
+    <color name="home_blue">#237be9</color>
+    <color name="m_blue_transparent">#cd2196f3</color>
+    <color name="lighSkyTransparent">#cf22adcc</color>
+    <color name="green_transparent">#c2009688</color>
+    <color name="newuibg">#fff4f6fa</color>
+    <color name="newui2nd">#8B8B8B</color>
+
+    // Gallery and Camera
+
+    <color name="imagepicker_black_alpha_50">#80000000</color>
+
+    <color name="grey_800">#565656</color>
+    <color name="blue_grey_400">#90A4AE</color>
+    <color name="blue_grey_700">#455a64</color>
+    <color name="blue_grey_900">#37474F</color>
+    <color name="product_purple">#7460EE</color>
+    <color name="ColorHyperLink">#0645AD</color>
+
+    <color name="m_red">#f44336</color>
+    <color name="m_pink">#e91e63</color>
+    <color name="m_purple">#9c27b0</color>
+    <color name="m_deep_purple">#673ab7</color>
+    <color name="m_indigo">#3f51b5</color>
+    <color name="m_blue">#2196f3</color>
+    <color name="m_light_blue">#03a9f4</color>
+    <color name="m_cyan">#00bcd4</color>
+    <color name="m_teal">#009688</color>
+    <color name="m_green">#4caf50</color>
+    <color name="m_light_green">#8bc34a</color>
+    <color name="m_lime">#cddc39</color>
+    <color name="m_yellow">#ffeb3b</color>
+    <color name="m_amber">#ffc107</color>
+    <color name="m_orange">#ff9800</color>
+    <color name="m_deep_orange">#ff5722</color>
+    <color name="m_brown">#795548</color>
+    <color name="m_grey">#9e9e9e</color>
+    <color name="m_blue_grey">#607d8b</color>
+    <color name="silver">#CCC</color>
+    <color name="alphagray">#32787776</color>
+
+    <!--For Health App-->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="theme">#F814A7</color>
+    <color name="licspa_theme">#F814A7</color>
+    <color name="demotheme">#F814A7</color>
+    <color name="button">#5a249d</color>
+    <color name="bg">#f8f9fd</color>
+    <color name="leaderboard">#f5f6fa</color>
+    <color name="leaderboard_text">#5a249d</color>
+    <color name="homescreen_btn">#5a249d</color>
+    <color name="homescreen_bg">#fbfbfc</color>
+    <color name="homescreen_score">#f4f6fa</color>
+
+    <!--end health app-->
+
+
+    <integer-array name="rainbow">
+        <item>@color/m_red</item>
+        <item>@color/m_pink</item>
+        <item>@color/m_purple</item>
+        <item>@color/m_deep_purple</item>
+        <item>@color/m_indigo</item>
+        <item>@color/m_blue</item>
+        <item>@color/m_light_blue</item>
+        <item>@color/m_cyan</item>
+        <item>@color/m_teal</item>
+        <item>@color/m_green</item>
+        <item>@color/m_light_green</item>
+        <item>@color/m_lime</item>
+        <item>@color/m_yellow</item>
+        <item>@color/m_amber</item>
+        <item>@color/m_orange</item>
+        <item>@color/m_deep_orange</item>
+        <item>@color/m_brown</item>
+    </integer-array>
+
+</resources>

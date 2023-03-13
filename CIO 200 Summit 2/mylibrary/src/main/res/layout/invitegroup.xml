@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sml="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sml"
+        android:layout_below="@+id/alpha_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        sml:sml_scroller_interpolator="@android:anim/bounce_interpolator"
+        sml:sml_auto_open_percent="0.2"
+        sml:sml_scroller_duration="250">
+
+        <include
+            android:id="@id/smContentView"
+            layout="@layout/g_invite_row" />
+        <include android:id="@id/smMenuViewLeft" layout="@layout/item_simple_left_menu"/>
+        <include android:id="@id/smMenuViewRight" layout="@layout/item_simple_right_menu"/>
+
+    </com.tubb.smrv.SwipeHorizontalMenuLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="2"
+        android:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.Activity.JoinChallenge">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:fontFamily="@font/roboto_slab_bold"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/totalchallenge"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+
+        android:textSize="20dp"
+        android:text="Available Challenges "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerviewcreate_joinChallenge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="25dp"
+        android:id="@+id/btn_create_challenge"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="45dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/healthbutton"
+        android:visibility="visible"
+        android:text="Create Challenge"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

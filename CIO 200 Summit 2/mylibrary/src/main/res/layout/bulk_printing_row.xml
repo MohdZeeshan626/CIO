@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/newuibg"
+    android:layout_height="wrap_content">
+
+   <!-- <ImageView
+        android:id="@+id/bp_user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/print_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/bp_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:fontFamily="@string/roboto_regular"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bp_user_image"
+        app:layout_constraintLeft_toRightOf="@+id/bp_user_image"
+        app:layout_constraintTop_toTopOf="@+id/bp_user_image" />
+
+    <CheckBox
+        android:id="@+id/bp_user_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/bp_user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bp_user_name" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/bp_user_image"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            app:riv_corner_radius_bottom_left="5dp"
+            app:riv_corner_radius_bottom_right="5dp"
+            android:src="@drawable/challengeimg"
+            app:riv_corner_radius_top_left="5dp"
+            app:riv_corner_radius_top_right="5dp"
+            android:scaleType="centerCrop"/>
+
+
+
+
+<RelativeLayout
+    android:id="@+id/name_ll"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/speakerbackground"
+    android:layout_margin="10dp"
+    android:layout_marginTop="10dp"
+    android:padding="1dp"
+    android:layout_toRightOf="@+id/bp_user_image"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+   >
+    <TextView
+        android:id="@+id/bp_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:fontFamily="@string/rubic_regular"
+        android:layout_toLeftOf="@+id/bp_user_check"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="1dp"
+         />
+    <TextView
+        android:id="@+id/bp_user_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Category"
+        android:fontFamily="@string/rubic_regular"
+        android:layout_below="@+id/bp_user_name"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/bp_user_check"
+        android:textColor="#B2B3B5"
+        android:layout_marginBottom="5dp"
+        android:textSize="12sp"
+        android:paddingLeft="5dp"
+
+        />
+    <CheckBox
+        android:id="@+id/bp_user_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@string/roboto_regular"
+        android:layout_marginLeft="12dp"/>
+</RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

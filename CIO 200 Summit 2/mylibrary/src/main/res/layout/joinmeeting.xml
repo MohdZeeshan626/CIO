@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@color/newuibg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+    <RelativeLayout
+        android:id="@+id/webmain"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:visibility="visible"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            foo:cardCornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:padding="0dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            >
+
+
+        <WebView
+            android:id="@+id/aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <!--  <TextView
+          android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+          android:text="Welcome To session"
+          android:textColor="@color/m_green"
+          android:layout_below="@+id/webmain"
+          android:gravity="center"
+          android:textSize="30dp"
+          >
+      </TextView>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/webmain"
+        android:visibility="gone"
+        android:background="#ffffffff"
+        android:id="@+id/mainview"
+        >
+
+        <LinearLayout
+            android:id="@+id/chat_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ffffffff"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/chatedit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="68dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="discussChat"
+                android:text="Discussion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/quesedit"
+                android:layout_weight="1"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="68dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="questionAsk"
+                android:text="Question"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <!--
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/chat_switch"
+                    android:id="@+id/products_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_above="@+id/sendchat"
+
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+        -->
+
+
+        <ListView
+            android:id="@+id/chat_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/amsg"
+            android:layout_below="@+id/chat_switch"
+            android:background="@color/newuibg"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dip"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            tools:listitem="@layout/message_right" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="2dp"
+            android:id="@+id/amsg"
+            android:paddingBottom="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/newuibg"
+            android:paddingLeft="10dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/sendchat"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginRight="65dp"
+                android:layout_marginLeft="5dp"
+                android:hint="Send Message..."
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"></EditText>
+
+            <ImageView
+                android:id="@+id/sendmsg"
+                android:layout_width="45dp"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/healthimagecircle"
+                android:padding="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:onClick="sendMessage"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/rightarrow"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:layout_below="@id/webmain"
+        android:background="#ffffffff"
+        android:id="@+id/mainview1"
+        >
+        <LinearLayout
+            android:id="@+id/chat_switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/chatedit1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="68dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="discussChat"
+                android:text="Discussion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/quesedit1"
+                android:layout_weight="1"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="68dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+
+                android:onClick="questionAsk"
+                android:text="Question"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear1st"
+            android:layout_below="@+id/chat_switch1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textSize="18sp"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Ask A Question"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:visibility="visible"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Vote up for your fav question or Ask a question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginTop="5dp"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:paddingBottom="20dp"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/addYourQues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginRight="68dp"
+            android:background="@drawable/rectanglebackground"
+            android:drawableLeft="@drawable/questionmark1"
+            android:drawablePadding="25dp"
+            android:elevation="2dp"
+            android:fontFamily="@string/roboto_regular"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="39dp"
+            android:paddingTop="8dp"
+            android:text="Ask a Question"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+</RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

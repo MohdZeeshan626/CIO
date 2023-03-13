@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#AF272F"
+                android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+                android:theme="@style/MyToolbarStyle"
+                app:titleTextColor="@color/black" />
+        -->
+
+
+        <ScrollView
+            android:id="@+id/scrollbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/fullview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/bannerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#36689D"
+                    android:gravity="center">
+
+                    <!--   <LinearLayout
+                    android:id="@+id/view_no_Internet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">-->
+
+                    <TextView
+                        android:id="@+id/tv_checkInternet"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:background="@color/m_orange"
+                        android:fontFamily="@string/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="10dp"
+                        android:text="please_check_your_internet_connection"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible">
+
+                    </TextView>
+
+
+                    <!--   </LinearLayout>-->
+
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="97dp"
+                        android:id="@+id/multi_logo"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+
+                        />
+                    <ImageView
+                        android:id="@+id/login"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/tv_checkInternet"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="#36689d"
+                        android:src="@drawable/menu_right_ic" />
+
+                    <ImageView
+                        android:id="@+id/login1"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="left"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_home_black_24dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mevent_name"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center"
+                        android:fontFamily="@string/roboto_regular"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/pguide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:background="#36689d"
+                        android:padding="2dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <ImageView
+                            android:id="@+id/key_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#36689d"
+                            android:src="@drawable/iconskey_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/privateguide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text=" Enter passphrase "
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/key_img"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+
+                <!--  <TextView
+                android:id="@+id/privateguide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/act_button_border"
+                android:padding="10dp"
+                android:text="ENTER PASSPHRASE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/key_img"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible" />-->
+
+
+                <RelativeLayout
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#f2f2f2"
+                    android:visibility="visible">
+                    <com.webmobi.gecmedia.CustomViews.DilatingDotsProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:color="@color/colorPrimary"
+                        android:radius="3dp"
+                        android:visibility="invisible"
+                        app:dd_animationDuration="500"
+                        app:dd_horizontalSpacing="4dp"
+                        app:dd_numDots="4"
+                        app:dd_scaleMultiplier="1.5" />
+                    <LinearLayout
+                        android:id="@+id/filmlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#f2f2f2"
+                        android:scrollbars="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/myevent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#f2f2f2"
+                            android:visibility="visible">
+
+                            <!--
+                                                        <com.webmobi.singex.CustomViews.TxtVCustomFonts
+                                                            android:id="@+id/h1"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_below="@+id/backward"
+                                                            android:layout_marginLeft="15dp"
+                                                            android:layout_marginTop="25dp"
+                                                            android:text="My Events"
+                                                            android:textStyle="bold"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="@dimen/heading"
+                                                            app:customFont="@string/proximanova" />
+                            -->
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="5dp">
+
+                                <ImageView
+                                    android:id="@+id/myevents_title_ic"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+
+                                    android:padding="8dp"
+                                    android:src="@drawable/myevent"
+                                    android:textColor="@color/blue_grey_400"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@string/roboto_regular"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:text="MY APPS"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="@+id/myevents_title_ic"
+                                    app:layout_constraintLeft_toRightOf="@+id/myevents_title_ic"
+                                    app:layout_constraintTop_toTopOf="@+id/myevents_title_ic" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIEW ALL"
+                                    android:textColor="@color/blue_grey_400"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toLeftOf="@+id/myevents_title_right_angle"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <cyd.awesome.material.AwesomeText
+                                    android:id="@+id/myevents_title_right_angle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:textColor="@color/blue_grey_400"
+                                    android:textSize="20sp"
+                                    app:awesome_font="font_awesome"
+                                    app:awesome_icon="FA_ANGLE_RIGHT"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <HorizontalScrollView
+                                android:id="@+id/horizontalScrollView"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="true"
+                                android:background="#f2f2f2"
+                                android:scrollbarSize="2dp"
+                                android:scrollbars="none"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:minHeight="150dp"
+                                android:padding="10dp"
+                                >
+                                <LinearLayout
+                                    android:id="@+id/llayout1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:background="#f2f2f2"
+                                    android:orientation="horizontal" />
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/recommevent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f2f2f2"
+                            android:orientation="vertical">
+
+                            <!--
+                                                        <com.webmobi.singex.CustomViews.TxtVCustomFonts
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_below="@+id/backward"
+                                                            android:layout_marginLeft="15dp"
+                                                            android:layout_marginTop="25dp"
+                                                            android:textStyle="bold"
+                                                            android:text="All Events"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="@dimen/heading"
+                                                            app:customFont="@string/proximanova" />
+                            -->
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="5dp">
+
+                                <ImageView
+                                    android:id="@+id/recevents_title_ic"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/totalevents1"
+                                    android:textColor="@color/blue_grey_400"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@string/roboto_regular"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:text="ALL APPS"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toRightOf="@+id/recevents_title_ic"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIEW ALL"
+                                    android:textColor="@color/blue_grey_400"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toLeftOf="@+id/recevents_title_right_angle"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <cyd.awesome.material.AwesomeText
+                                    android:id="@+id/recevents_title_right_angle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:textColor="@color/blue_grey_400"
+                                    android:textSize="20sp"
+                                    app:awesome_font="font_awesome"
+                                    app:awesome_icon="FA_ANGLE_RIGHT"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                            <HorizontalScrollView
+
+                                android:background="#f2f2f2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:focusableInTouchMode="true"
+                                android:minHeight="150dp"
+                                android:padding="10dp"
+                                android:scrollbarSize="2dp"
+                                android:scrollbars="none"
+                                >
+
+                                <LinearLayout
+                                    android:id="@+id/llayout2"
+                                    android:layout_width="wrap_content"
+                                    android:background="@color/alpha_white"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal" />
+
+
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+        <!--
+                <RelativeLayout
+                    android:id="@+id/view22"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fitsSystemWindows="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/transparent_back">
+
+                    <android.support.design.widget.BottomNavigationView
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/m_red"
+                        app:menu="@menu/bottom_navigation"></android.support.design.widget.BottomNavigationView>
+
+                </RelativeLayout>
+        -->
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frame_containers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottomnavigationbackground"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:itemTextColor="@color/white"
+
+        app:menu="@menu/navigation"/>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        android:background="@drawable/top_border"-->
+<!--        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"-->
+<!--        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"-->
+<!--        app:menu="@menu/navigation"/>-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

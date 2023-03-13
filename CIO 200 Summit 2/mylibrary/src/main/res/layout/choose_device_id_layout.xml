@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="45sp"
+                app:awesome_font="pixeden_stroke"
+                app:awesome_icon="PE_CLOSE" />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/backward"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="@string/message_to_select_device_id"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular_light" />
+
+
+            <EditText
+                android:id="@+id/etSelectForUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/act_edittextback"
+                android:inputType="text"
+                android:hint="Search for User"
+                android:fontFamily="@string/roboto_regular"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnGo"
+                style="@style/Base.TextAppearance.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etSelectForUser"
+                android:background="@color/sColorPrimary"
+                android:backgroundTint="@color/sColorPrimary"
+                android:text="Go"
+                android:fontFamily="@string/roboto_regular"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/h3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnGo"
+                android:layout_marginTop="15dp">
+                <EditText
+                    android:id="@+id/etChooseForUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:drawableRight="@drawable/ic_arrow_drop_down_black"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="false"
+                    android:fontFamily="@string/roboto_regular"
+                    android:background="@drawable/act_edittextback"
+                    android:inputType="text"
+                    android:hint="support@mendios.com"
+                    android:padding="10dp"
+                    android:textColor="@color/black" />
+
+
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnChoose"
+                style="@style/Base.TextAppearance.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h3"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@color/sColorPrimary"
+                android:backgroundTint="@color/sColorPrimary"
+                android:padding="12dp"
+                android:text="Choose"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

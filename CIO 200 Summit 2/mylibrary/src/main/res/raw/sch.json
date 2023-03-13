@@ -1,0 +1,52 @@
+[
+  {
+    "name": 1506470400000,
+    "timeslot": [
+      {
+        "fromtime": 1506520800000,
+        "totime": 1506522600000,
+        "booked": false
+      },
+      {
+        "fromtime": 1506522600000,
+        "totime": 1506525300000,
+        "booked": true
+      },
+      {
+        "fromtime": 1506525300000,
+        "totime": 1506527100000,
+        "booked": false
+      },
+      {
+        "fromtime": 1506527100000,
+        "totime": 1506528900000,
+        "booked": false
+      }
+    ]
+  },
+  {
+    "name": 1506556800000,
+    "timeslot": [
+      {
+        "fromtime": 1506585600000,
+        "totime": 1506589200000,
+        "booked": false
+      },
+      {
+        "fromtime": 1506589200000,
+        "totime": 1506594600000,
+        "booked": false
+      },
+      {
+        "fromtime": 1506594600000,
+        "totime": 1506596400000,
+        "booked": false
+      },
+      {
+        "fromtime": 1506596400000,
+        "totime": 1506600000000,
+        "booked": false
+      }
+    ]
+  }
+]

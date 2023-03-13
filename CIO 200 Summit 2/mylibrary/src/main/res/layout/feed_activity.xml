@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/sColorPrimary"
+                app:navigationIcon="@drawable/backwhite">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Activity Feeds"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!-- Main layout for fragment placing -->
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f2f2f2"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/admin_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="Feed" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="Reported Feeds" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="Blocked Users" />
+                </LinearLayout>
+
+<!--                <androidx.core.widget.NestedScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/postHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/admin_panel">
+
+                            <LinearLayout
+                                android:id="@+id/background_theme"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@color/theme2"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/filter_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="5dp"
+                                    android:background="@drawable/circular_shape"
+                                    android:padding="2dp"
+                                    android:src="@drawable/ic_filter" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/roboto_slab"
+                                    android:text="Team Filter"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+
+                                <View
+                                    android:layout_width="0.5dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:background="@color/white" />
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scrollbars="none">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/latest"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="10dp"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:text="Latest"
+                                            android:textColor="@color/white"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/featured"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="10dp"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:text="Featured"
+                                            android:textColor="@color/dark_grey"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/social"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="10dp"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:text="Social"
+                                            android:textColor="@color/dark_grey"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/news"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="10dp"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:text="News"
+                                            android:textColor="@color/dark_grey"
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/questions"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginEnd="5dp"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:text="Questions"
+                                            android:textColor="@color/dark_grey"
+                                            android:textSize="15sp" />
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/filter_layout"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="10dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/write"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:src="@drawable/c_post"
+                                                app:tint="@color/theme2" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="4dp"
+                                                android:fontFamily="@font/roboto_slab"
+                                                android:text="Write"
+                                                android:textColor="@color/theme2"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/upload"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:src="@drawable/ic_insert_link"
+                                                app:tint="@color/theme2" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="4dp"
+                                                android:fontFamily="@font/roboto_slab"
+                                                android:text="Upload"
+                                                android:textColor="@color/theme2"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+
+                                        <Space
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@color/dark_grey" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:orientation="horizontal">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/deficon1" />
+
+                                        <EditText
+                                            android:id="@+id/editText_for_post"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="5dp"
+                                            android:background="@color/white"
+                                            android:enabled="false"
+                                            android:fontFamily="@font/roboto_slab"
+                                            android:hint="Share a post with your team"
+                                            android:minLines="2"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/post_image"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/challengeimg"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/post"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/roundedittext"
+                                        android:onClick="createPost"
+                                        android:padding="13dp"
+                                        android:text="POST"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+                            android:id="@+id/feedswiperefresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/postHeader"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="#fff4f6fa">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/products_recycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/admin_panel"
+                                android:background="#fff4f6fa"
+                                android:scrollbars="none" />
+                        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                    </LinearLayout>
+<!--                </androidx.core.widget.NestedScrollView>-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noitems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@string/roboto_regular"
+                android:gravity="center"
+                android:text="No Activity"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/morepost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp">
+
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_uparrow"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/moreitems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:gravity="center"
+                android:text="New posts"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

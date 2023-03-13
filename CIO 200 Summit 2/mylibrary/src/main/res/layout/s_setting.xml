@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite">
+
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            foo:awesome_font="pixeden_stroke"
+            foo:awesome_icon="PE_POWER" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff4f6fa">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/done"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/edit"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="15dp">
+
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/iv_profile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/profilebg"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/challengeimg" />
+
+                        <ImageView
+                            android:id="@+id/iv_edit_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_oval_white"
+                            foo:srcCompat="@drawable/profile_edit" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@string/roboto_regular_bold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/profession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/username"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@string/roboto_regular"
+                        android:text=""
+                        android:textColor="#ffb1b2b5"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="10dp"
+                    foo:cardCornerRadius="6dp"
+                    foo:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/linkedin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/linkedinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:text="LinkedIn"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/connect_linkedin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connect"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/connected_linkedin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connected"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/authenticate_linkedin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Authenticate"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:id="@+id/linkedin"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:background="@color/white"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:padding="6dp"-->
+                    <!--                        android:visibility="visible">-->
+
+                    <!--                        <cyd.awesome.material.AwesomeText-->
+                    <!--                            android:id="@+id/a1"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_alignParentLeft="true"-->
+                    <!--                            android:layout_centerVertical="true"-->
+                    <!--                            android:layout_marginLeft="15dp"-->
+                    <!--                            android:textColor="@color/white"-->
+                    <!--                            android:textSize="16sp"-->
+                    <!--                            foo:awesome_font="font_awesome"-->
+                    <!--                            foo:awesome_icon="FA_LINKEDIN" />-->
+
+
+                    <!--                        <TextView-->
+                    <!--                            android:id="@+id/txtfac"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_centerHorizontal="true"-->
+                    <!--                            android:layout_centerVertical="true"-->
+                    <!--                            android:layout_toRightOf="@+id/a1"-->
+                    <!--                            android:fontFamily="@string/roboto_regular"-->
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:padding="6dp"-->
+                    <!--                            android:text="Sync with Linkedin"-->
+                    <!--                            android:textColor="@color/white"-->
+                    <!--                            android:textSize="16sp" />-->
+
+                    <!--                    </RelativeLayout>-->
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="10dp"
+                    android:visibility="gone"
+                    foo:cardCornerRadius="6dp"
+                    foo:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/facebook" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:text="Facebook"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/connect_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connect"
+                            android:visibility="gone"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/connected_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connected"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/authenticate_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Authenticate"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="10dp"
+                    foo:cardCornerRadius="6dp"
+                    foo:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/twitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/twitter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:text="Twitter"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/connect_twitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connect"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/connected_twitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Connected"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/authenticate_twitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="10dp"
+                            android:text="Authenticate"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_h1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linkedin"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Profile Visibility"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_h1">
+
+                    <TextView
+                        android:id="@+id/tv_desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Other attendees can see me"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    <!-- <android.support.v7.widget.AppCompatCheckBox
+                         android:layout_below="@+id/tv_h1"
+                         android:layout_alignBaseline="@+id/tv_desc1"
+                         android:layout_marginRight="10dp"
+                         android:theme="@style/CheckboxStyle"
+                         android:layout_alignParentRight="true"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />-->
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_desc1"
+                        android:layout_alignParentRight="true"
+
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/tv_desc1"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch" />
+                </RelativeLayout>
+
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/h2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="First Name*"
+                    android:textColor="#ff474747"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Last Name*"
+                    android:textColor="#ff474747"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@string/roboto_regular"
+
+                    android:text="Email*"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/temail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Mobile Number*"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="phone"
+                    android:maxLength="16"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Job position*"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/jobpos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Company*"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Website"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Description"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:id="@+id/des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:textColor="#ff474747" />
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/h9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:text="Url"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:id="@+id/burl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="#ff474747" />
+
+
+                <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                    android:id="@+id/changewd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@string/roboto_regular_bold"
+                    android:text="Change Password"
+                    android:textColor="#ff474747"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/healthpostbut"
+            android:fontFamily="@string/roboto_regular"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="SAVE"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

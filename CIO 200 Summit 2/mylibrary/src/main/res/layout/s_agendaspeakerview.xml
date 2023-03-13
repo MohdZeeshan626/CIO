@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff4f6fa"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/speakerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="vertical"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/speakerimage"
+            android:layout_width="60dp"
+            android:paddingTop="4dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/default_user"
+            android:layout_height="60dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/speakerbackground"
+        android:layout_toRightOf="@+id/speakerview"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:layout_marginRight="35dp"
+            android:maxLines="3"
+            android:singleLine="true"
+            android:text="Appa/SRAPPA/TNAPPA/Fun"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:text="Bangaloreg"
+            android:layout_marginRight="35dp"
+            android:textColor="#8F9FA9"
+            android:textSize="12sp"
+            android:singleLine="true" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/rightArrow"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentRight="true"
+
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+
+        android:src="@drawable/back1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:layout_below="@+id/speakerview"
+        android:layout_toRightOf="@+id/speakerview"
+        android:background="@color/semilightgray" />
+
+
+</RelativeLayout>

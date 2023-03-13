@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_blue"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.ActionBar"
+        app:navigationIcon="@drawable/ic_close" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sch_back"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_showless"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="DATE"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/dateshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:id="@+id/radiodatfilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/alldates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="All Dates"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="Today"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/Tomorrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="Tomorrow"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/NextWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="Next Week"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/NextMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="Next Month"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/ChooseDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:checked="false"
+                        android:layoutDirection="rtl"
+                        android:padding="10dp"
+                        android:text="Choose Date"
+                        android:textAlignment="textStart"
+                        android:textColor="@drawable/radio_textcolor"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/dateselection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="2.5">
+
+
+                    <TextView
+                        android:id="@+id/from_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/act_aboutborder"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="Jul 17 2015"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight=".5"
+                        android:gravity="center"
+                        android:text="to"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/to_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/act_aboutborder"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="Jul 17 2015"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+
+                <DatePicker
+                    android:id="@+id/datapicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_locationrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sch_back"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_showless"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Distance"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/locationrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Set Search Radius - 64kms"
+                    android:textColor="@color/black" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:max="1000"
+                    android:thumbTintMode="multiply" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_eventtypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sch_back"
+                android:clickable="true"
+                android:drawableRight="@drawable/icon_showless"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Choose the Event Types"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/eventshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <CheckBox
+                        android:id="@+id/allevent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/customcheckbox"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="All"
+                        android:textColor="#2a2a2a"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

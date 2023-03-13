@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/queno"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="How's the event ?"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/totalvote"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/queno"
+            android:layout_marginLeft="25dp"
+            android:padding="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp"
+            android:text="Total Number of Votes: "
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/quevote"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp"
+            android:text="Vote"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

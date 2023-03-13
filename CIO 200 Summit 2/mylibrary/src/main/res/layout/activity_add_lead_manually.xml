@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:foo="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Full Name *"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                foo:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/et_fName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/act_edittextback"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Email Address*"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                foo:customFont="@string/roboto_regular"/>
+
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/act_edittextback"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+               />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Phone Number"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                foo:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/act_edittextback"
+                android:inputType="number"
+                android:textColor="@color/black" />
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Company"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                foo:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/et_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/act_edittextback"
+                android:inputType="text"
+                android:textColor="@color/black" />
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:id="@+id/h5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                foo:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/act_edittextback"
+                android:inputType="text"
+                android:fontFamily="@string/roboto_regular"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="56dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_save"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:text="      Save      "
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:fontFamily="@string/roboto_regular"
+                    android:backgroundTint="@color/green_transparent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                   android:backgroundTint="@color/green_transparent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="     Cancel     "
+                    android:fontFamily="@string/roboto_regular"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

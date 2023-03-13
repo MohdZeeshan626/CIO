@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff4f6fa"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/alpha_header"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:text="A"
+        android:clickable="false"
+        android:textAllCaps="true"
+        android:fontFamily="@string/roboto_regular"
+        android:background="@color/light_gray"
+        android:textColor="@color/dark_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_below="@+id/alpha_header"
+        android:gravity="center_vertical"
+        android:background="#fff4f6fa"
+        android:paddingTop="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/relativeLayout1st"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/sponsorview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/right_border"
+            android:orientation="vertical"
+           >
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/sponsorimage"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/speakerbackground"
+                android:src="@drawable/challengeimg" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_toRightOf="@+id/sponsorview"
+            android:background="@drawable/speakerbackground"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="6dp"
+            android:padding="0dp">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_height="wrap_content">
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/dotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+                    app:awesome_font="font_awesome"
+                    app:awesome_icon="FA_CIRCLE" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/dots"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:maxLines="3"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text="Webmobi/Mendios/technologies/Fun RUN"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@string/roboto_regular"
+                android:singleLine="true"
+                android:text="Bangalore"
+                android:textColor="@color/newui2nd"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="7dp"
+
+                android:layout_height="match_parent">
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/dots1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="8sp"
+                    app:awesome_font="font_awesome"
+                    app:awesome_icon="FA_CIRCLE" />
+
+                <TextView
+                    android:id="@+id/cat"
+                    android:layout_width="246dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:singleLine="true"
+                    android:text="Category"
+                    android:textColor="@color/newui2nd"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/category"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Breakout Session"
+                    android:textColor="#8F9FA9"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:layout_below="@+id/relativeLayout1st"
+        android:layout_toRightOf="@+id/speakerview"
+        android:background="@color/semilightgray" />
+
+
+
+</RelativeLayout>

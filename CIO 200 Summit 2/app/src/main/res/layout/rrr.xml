@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#727272"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:visibility="visible"
+        android:background="#ffffffff"
+        android:id="@+id/mainview"
+        >
+
+        <LinearLayout
+            android:id="@+id/chat_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/chatedit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="68dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="discussChat"
+                android:text="Discussion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/quesedit"
+                android:layout_weight="1"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/rect_backg_without_corner"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="68dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:onClick="questionAsk"
+                android:text="Question"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <!--
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@+id/chat_switch"
+                    android:id="@+id/products_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_above="@+id/sendchat"
+
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+        -->
+
+
+        <ListView
+            android:id="@+id/chat_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/amsg"
+            android:layout_below="@+id/chat_switch"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dip"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            tools:listitem="@layout/message_right" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="2dp"
+            android:id="@+id/amsg"
+            android:paddingBottom="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/newuibg"
+            android:paddingLeft="10dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/sendchat"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginRight="65dp"
+                android:layout_marginLeft="5dp"
+                android:hint="Send Message..."
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"></EditText>
+
+            <ImageView
+                android:id="@+id/sendmsg"
+                android:layout_width="45dp"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/healthimagecircle"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:onClick="sendMessage"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_chat_send_active"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

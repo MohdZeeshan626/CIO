@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/sColorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/h2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/backward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    app:awesome_font="pixeden_stroke"
+                    app:awesome_icon="PE_CLOSE" />
+
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="CONTACT US"
+                    android:fontFamily="@string/roboto_regular"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/footer"
+                android:layout_below="@+id/h2">
+
+                <ImageView
+                    android:id="@+id/contactusicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/contact" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/env"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".4"
+                            android:gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            app:awesome_font="pixeden_stroke"
+                            app:awesome_icon="PE_MAIL" />
+
+                        <LinearLayout
+                            android:id="@+id/emailh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:orientation="vertical">
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Email"
+                                android:fontFamily="@string/roboto_regular"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/emailaddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:singleLine="true"
+                                android:fontFamily="@string/roboto_regular"
+                                android:text="support@webmobi.com"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <cyd.awesome.material.AwesomeText
+                            android:id="@+id/mob"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".4"
+                            android:gravity="right"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            app:awesome_font="pixeden_stroke"
+                            app:awesome_icon="PE_PHONE" />
+
+                        <LinearLayout
+                            android:id="@+id/mobh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.6"
+                            android:orientation="vertical">
+
+                            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Phone"
+                                android:fontFamily="@string/roboto_regular"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/phonenumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:text="+91 99999999"
+                                android:fontFamily="@string/roboto_regular"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/h1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-56dp"
+            android:background="#fff4f6fa"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Name"
+                android:fontFamily="@string/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h2"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/speakerbackground"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:text="Email Address"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/speakerbackground"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Phone Number"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/pnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/speakerbackground"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h1"
+                android:layout_marginLeft="15dp"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:customFont="@string/roboto_regular" />
+
+            <EditText
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/speakerbackground"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:gravity="start"
+                android:textColor="@color/black" />
+
+
+            <!--<cyd.awesome.material.AwesomeText
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_icon"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                app:awesome_font="pixeden_stroke"
+                app:awesome_icon="PE_PAPER_PLANE" />-->
+            <Button
+                android:id="@+id/send"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="SEND"
+                android:fontFamily="@string/roboto_regular"
+                android:textAllCaps="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:minHeight="40dp"
+                android:background="@drawable/healthpostbut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

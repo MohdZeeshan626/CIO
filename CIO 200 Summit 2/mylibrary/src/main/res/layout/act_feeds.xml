@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/sColorPrimary"
+                app:navigationIcon="@drawable/backwhite">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Activity Feeds"
+                    android:fontFamily="@string/roboto_regular"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!-- Main layout for fragment placing -->
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/admin_panel"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="@drawable/rect_backg_without_corner"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/feed"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="Feed"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/reportedFeeds"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="Reported Feeds"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/blockedUsers"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="Blocked Users"
+                        android:textColor="@color/white"
+                        android:padding="5dp"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/rect_backg_without_corner"
+                        android:fontFamily="@string/roboto_regular"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <FrameLayout
+                    android:id="@+id/container2nd"
+                    android:layout_below="@+id/admin_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

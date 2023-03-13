@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_gray_5"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/noitem"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/zm_gray_5"
+
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@+id/leaderboard_image"
+        android:text="Not Available"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="5dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/maincard"
+            android:visibility="visible"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:id="@id/r1"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:padding="1dp">
+
+                    <Button
+                        android:id="@+id/viewchallenge"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/l2"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/healthbutton"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="  View Challenges "
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+
+                    <ImageView
+                        android:id="@+id/stepimg1"
+                        android:layout_width="168dp"
+                        android:layout_height="175dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="20dp"
+                        android:src="@drawable/runlady"
+                        android:visibility="gone"></ImageView>
+
+
+                    <LinearLayout
+                        android:id="@+id/l2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_below="@+id/l1"
+                       >
+
+                        <ImageView
+                            android:id="@+id/leaderboard_image"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/deficon1" />
+
+                        <TextView
+                            android:id="@+id/leaderboard_txtname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="5dp"
+                            android:background="@drawable/rounded_bg_white"
+                            android:layout_toRightOf="@+id/leaderboard_image"
+                            android:fontFamily="@string/roboto_regular"
+                            android:text="0 Joined"
+                            android:textColor="@color/gray"
+                            android:textSize="9sp" />
+
+                        <ImageView
+                            android:id="@+id/calimg"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/graycal" />
+
+                        <TextView
+                            android:id="@+id/txt_upcoming_Challenge_dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/l2"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="5dp"
+                            android:layout_toRightOf="@id/calimg"
+                            android:fontFamily="@string/rubic_regular"
+                            android:text="jan 6 - jan 12"
+                            android:background="@drawable/rounded_bg_white"
+
+                            android:textColor="#ff9c9eb9"
+                            android:textSize="9sp"
+                            android:layout_marginTop="3dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="360dp"
+
+                        android:layout_toRightOf="@+id/l2"
+                        > <androidx.cardview.widget.CardView
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="10dp"
+                        >
+                        <ImageView
+                            android:id="@+id/mainimage"
+                            android:layout_width="200dp"
+                            android:layout_height="250dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="0dp"
+                             />
+                    </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@id/l1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_below="@+id/cnam"
+                       >
+
+                        <ImageView
+                            android:id="@+id/leaderboard_image1"
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/deficon1" />
+
+                        <TextView
+                            android:id="@+id/leaderboard_txtname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:padding="5dp"
+                            android:layout_toRightOf="@+id/leaderboard_image"
+                            android:fontFamily="@string/rubic_regular"
+                            android:text=" Created by Grace"
+                            android:background="@drawable/rounded_bg_white"
+                            android:textColor="#ff9c9eb9"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/cnam"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cname"
+                        android:layout_marginTop="8dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:background="@drawable/rounded_bg_white"
+                        android:layout_marginLeft="0dp"
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:text="Beginner 1000 steps"
+                        android:textColor="#ff9c9eb9"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cname"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_bg_white"
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:text="Office workout "
+                        android:textColor="@color/black"
+                        android:textSize="18sp">
+
+                    </TextView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

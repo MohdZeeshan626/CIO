@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/s_all_side_radius"
+    android:orientation="vertical">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        app:behavior_overlapTop="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/creategroupform"
+        >
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/gclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            app:awesome_font="pixeden_stroke"
+            app:awesome_icon="PE_CLOSE" />
+
+        <com.singleevent.sdk.Custom_View.TxtVCustomFonts
+            android:id="@+id/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Create Group"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:customFont="@string/roboto_regular_light" />
+
+
+        <View
+            android:background="#dddddd"
+            android:layout_below="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="55dp"
+            android:layout_height="1.2dp"/>
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_marginTop="55dp"
+            android:textSize="22dp"
+            android:textColor="#ffae59ee"
+            android:textStyle="bold"
+
+            ></TextView>
+        <EditText
+            android:id="@+id/ed_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:background="@drawable/act_aboutborder"
+            android:layout_below="@+id/group_name"
+            android:hint="  Name your group"
+            >
+        </EditText>
+
+
+
+
+    </RelativeLayout>
+    <View
+        android:background="#dddddd"
+        android:layout_below="@+id/creategroupform"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0.8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/privacy"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/creategroupform">
+
+        <TextView
+            android:id="@+id/group_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Privacy"
+            android:textColor="#ffae59ee"
+            android:textSize="22dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/public_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/group_privacy"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/globalnew">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <RelativeLayout
+                android:id="@+id/gpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/gp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Public"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="normal"></TextView>
+
+                <TextView
+                    android:id="@+id/gp_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gp_text"
+                    android:padding="5dp"
+                    android:layout_marginRight="80dp"
+
+                    android:text="Anyone can see who's in the group and what they post"
+                    android:textSize="15dp"
+                    android:textStyle="normal"/>
+
+
+               <!-- <RadioButton
+                    android:id="@+id/radio_pirates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+
+                    android:layout_marginTop="15dp"
+                    android:buttonTint="@color/black"
+                    android:onClick="onRadioButtonClickedPublic"
+                    android:padding="5dp" />-->
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio1"
+                    android:layout_alignParentEnd="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+                <RadioButton
+                    android:id="@+id/user_check"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDeliveryScheduleRadioButton"
+                    android:buttonTint="#ffae59ee"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="12dp"/>
+                </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/private_privacy"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/public_privacy"
+
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/privatenew"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <RelativeLayout
+                android:id="@+id/rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/gpr_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Private"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="normal"></TextView>
+
+                <TextView
+                    android:id="@+id/gpr_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gpr_text"
+                    android:padding="5dp"
+                    android:layout_marginRight="80dp"
+                    android:text="Only member can see who's in the group and what the post"
+                    android:textSize="15dp"
+                    android:textStyle="normal"></TextView>
+
+
+                <!--<RadioButton
+                    android:id="@+id/radio_pirates1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:buttonTint="@color/black"
+                    android:layout_marginEnd="21dp"
+                    android:onClick="onRadioButtonClickedPrivate"/>-->
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio2"
+                    android:layout_alignParentEnd="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+                <RadioButton
+                    android:id="@+id/user_check1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffae59ee"
+                    android:onClick="onDeliveryScheduleRadioButton"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="12dp"/>
+                </RadioGroup>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:background="#dddddd"
+        android:layout_below="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0.8dp"/>
+
+<!--
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/privacy"
+    android:layout_marginLeft="10dp"
+    >
+    <TextView
+        android:id="@+id/group_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="More Options"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/group_hide"
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_more"
+
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/privatenew"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <RelativeLayout
+            android:id="@+id/rhide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/rhtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Hide Group"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal"></TextView>
+
+            <TextView
+                android:id="@+id/rhtext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rhtext"
+                android:padding="5dp"
+                android:text="visible"
+                android:textSize="15dp"
+                android:textStyle="normal"></TextView>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
+-->
+</RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- <cyd.awesome.material.AwesomeText
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="#8F9FA9"
+                 android:textSize="45sp"
+                 app:awesome_font="pixeden_stroke"
+                 app:awesome_icon="PE_CHECK" />
+
+             <TextView
+                 android:id="@+id/savetxt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Save"
+                 android:textColor="#8F9FA9"
+                 android:textSize="20sp" />-->
+            <Button
+                android:id="@+id/savetxt"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="  Create group  "
+                android:textAllCaps="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:minHeight="40dp"
+                android:fontFamily="@string/roboto_regular"
+                android:background="@drawable/lead_gen_btn_bckg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

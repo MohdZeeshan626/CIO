@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zm_ui_kit_color_gray_E4E4ED"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/dark_gray"
+        android:id="@+id/header"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/backpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/zm_btn_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/youra"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/backpress"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Join or Create Challenge"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="10sp"
+            android:background="@color/zm_gray_2"
+            android:padding="5dp"
+            android:text=" cancel "
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerInParent="true"
+        android:layout_weight="@dimen/zm_btn_height_24dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Select your Challenge"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_weight="@dimen/zm_btn_height_24dp"
+        android:text="Step 1/4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/r2"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="10dp"
+        android:layout_margin="40dp"
+        android:background="@drawable/zm_ui_kit_btn_round_white_gray_border"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/stepimg1"
+            android:layout_width="220dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/steps1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:src="@drawable/modeimg"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/points1"
+            android:layout_below="@id/stepimg1"
+            android:layout_height="wrap_content"
+            android:text="WALKING CHALLENGE"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="#203241"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subt"
+            android:layout_below="@id/points1"
+            android:text="A competition to see who covered more distance or minute by walking   "
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/gray"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/select"
+            android:layout_below="@+id/subt"
+            android:text="Select"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@color/theme"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/white"></TextView>
+    </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

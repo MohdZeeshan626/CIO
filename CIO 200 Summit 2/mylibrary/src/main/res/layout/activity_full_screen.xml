@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.LeftActivity.FullScreenActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            foo:navigationIcon="@drawable/backwhite" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imagedownload"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:text="Download"></Button>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_height="match_parent">
+        <com.singleevent.sdk.Left_Adapter.ViewPagerFixed
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image_view"/>
+
+        <ImageButton
+            android:id="@+id/rightmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:visibility="gone"
+            android:layout_marginBottom="242dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            foo:layout_editor_absoluteX="329dp"
+            foo:layout_editor_absoluteY="222dp" />
+
+        <ImageButton
+            android:id="@+id/leftmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="242dp"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            foo:layout_editor_absoluteX="16dp"
+            foo:layout_editor_absoluteY="222dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

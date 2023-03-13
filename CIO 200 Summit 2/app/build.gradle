@@ -1,0 +1,213 @@
+apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url 'https://maven.fabric.io/public'
+    }
+}
+
+android {
+
+    buildFeatures{
+        dataBinding = true
+    }
+    signingConfigs {
+        config {
+            keyAlias 'webmobi'
+            keyPassword 'webmobi'
+            storeFile file('/../events.keystore')
+            storePassword 'webmobi'
+        }
+
+
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+
+            // Add debug keystore credentials here
+        }
+
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+//            signingConfig signingConfigs.release
+            // Add release keystore credentials here
+        }
+    }
+
+
+    compileSdkVersion 31
+    buildToolsVersion '30.0.2'
+    defaultConfig {
+        applicationId "com.webmobi.gecmedia"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 122
+        versionName "1.122"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    aaptOptions{
+        cruncherEnabled=false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue("bool", "FIREBASE_CRASH_ENABLED", "true")
+            lintOptions {
+                disable 'MissingTranslation'
+                checkReleaseBuilds false
+
+            }
+
+        }
+        debug{
+            resValue("bool", "FIREBASE_CRASH_ENABLED", "false")
+        }
+
+    }
+    /*productFlavors {
+    }*/
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    ///4implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.play:core:1.10.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+
+    implementation 'org.jsoup:jsoup:1.10.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.android.gms:play-services-fitness:20.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    // 3implementation 'com.google.firebase:firebase-invites:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+    implementation 'cyd.awesome.android:awesome-material:1.0'
+
+    implementation 'cyd.awesome.android:awesome-material:1.0'
+    implementation 'com.google.guava:guava:20.0'
+    implementation 'io.paperdb:paperdb:2.7.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+
+    implementation('com.google.firebase:firebase-crashlytics:17.0.0-beta01') {
+        transitive = true
+    }
+
+
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation project(':mylibrary')
+
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'me.dm7.barcodescanner:zbar:1.9.8'
+    implementation 'com.wrld:wrld-android-sdk:0.0.525@aar'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    // JSON Parsing
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    ///implementation 'com.facebook.android:facebook-android-sdk:4.34.0'
+
+    implementation 'com.facebook.android:facebook-share:5.15.3'
+    implementation 'com.twitter.sdk.android:tweet-composer:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'org.twitter4j:twitter4j-core:4.0.7'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.datatheorem.android.trustkit:trustkit:1.0.3'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'io.agora.rtc:full-sdk:3.4.2'
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //1 implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation "com.karumi:dexter:5.0.0"
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+
+
+
+    //    compile 'com.facebook.android:facebook-share:[4,5
+    // )'
+    //  implementation project(':commonlib')
+    //  implementation project(':mobilertc')
+
+    // dependancy for exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+
+// for core support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:r2.4.0'
+
+// for adding dash support in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-dash:r2.4.0'
+
+// for adding hls support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.4.0'
+
+// for smooth streaming of video in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:r2.4.0'
+// for generating default ui of exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer-ui:r2.4.0'
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

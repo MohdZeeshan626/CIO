@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff4f6fa"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/txtSender"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="6dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/prof_iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/txtSender"
+            android:padding="2dp"
+            android:src="@drawable/alpha_j"
+            app:riv_corner_radius_bottom_left="5dp"
+            app:riv_corner_radius_bottom_right="5dp"
+            app:riv_corner_radius_top_left="5dp"
+            app:riv_corner_radius_top_right="5dp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_below="@+id/txtbody"
+            android:layout_alignLeft="@+id/txtbody"
+            android:layout_alignStart="@+id/txtbody"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp"
+            android:textColor="#ffaf5cef"
+            android:text="9:41 AM"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/txtbody"
+            android:layout_toRightOf="@+id/prof_iv"
+            android:background="@drawable/speakerbackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:fontFamily="@string/roboto_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, how are you?"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

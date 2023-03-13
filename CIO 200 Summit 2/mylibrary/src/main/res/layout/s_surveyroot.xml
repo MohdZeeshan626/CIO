@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+
+    <ScrollView
+        android:id="@+id/mscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="#fff4f6fa"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/contains"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tv_survey_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:padding="10dp"
+                android:text="Live Idea Sharing"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="10dp"
+                android:text="Text once entered cannot be changed"
+                android:textColor="#8F9FA9"
+                android:textSize="14sp" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/SingleAppCustomProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_margin="10dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressBackgroundTint="@color/semi_transparent"
+                android:progressTint="@color/dark_gray" />
+            <HorizontalScrollView
+                android:id="@+id/hor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/monthofevent"
+                android:layout_marginLeft="58dp"
+                android:layout_marginRight="58dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff4f6fa"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/sch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:visibility="gone"
+                    android:background="#fff4f6fa"
+                    android:orientation="horizontal" >
+
+                   <!-- <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/b1"
+                        android:layout_width="wrap_content"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyround"
+                        android:textSize="25dp"
+                        android:text="1"></TextView>
+
+
+                    <TextView
+                        android:layout_column="1"
+                        android:id="@+id/d1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/b2"
+                        android:layout_width="wrap_content"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyroundwhite"
+                        android:textSize="25dp"
+                        android:text="2"></TextView>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/d2"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/b3"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyroundwhite"
+                        android:textSize="25dp"
+                        android:text="3"></TextView>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/d3"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/b4"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyroundwhite"
+                        android:textSize="25dp"
+                        android:text="4"></TextView>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/d4"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/b5"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyroundwhite"
+                        android:textSize="25dp"
+                        android:text="5"></TextView>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/d5"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/b6"
+                        android:textAlignment="center"
+                        android:background="@drawable/surveyroundwhite"
+                        android:textSize="25dp"
+                        android:text="6"></TextView>
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/d6"
+                        android:layout_width="wrap_content"
+                        android:textSize="25dp"
+                        android:text="•••"></TextView>-->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <ViewFlipper
+                android:id="@+id/viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:measureAllChildren="true"
+                android:theme="@style/SingleAppSearchview" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/transparent_back"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:id="@+id/txtcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:fontFamily="@string/roboto_regular"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#439FD8"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/healthpostbut"
+
+            android:fontFamily="@string/roboto_regular"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="PREV"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/healthpostbut"
+
+            android:fontFamily="@string/roboto_regular"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="NEXT"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+        <!--  <cyd.awesome.material.AwesomeText
+              android:id="@+id/backward"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"
+              android:textColor="#439FD8"
+              android:textSize="26sp"
+              android:text="PREV"
+              foo:awesome_font="pixeden_stroke"
+              foo:awesome_icon="PE_ANGLE_LEFT_CIRCLE" />
+
+          <cyd.awesome.material.AwesomeText
+              android:id="@+id/up"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:textColor="#439FD8"
+              android:textSize="26sp"
+              foo:awesome_font="pixeden_stroke"
+              foo:awesome_icon="PE_ANGLE_RIGHT_CIRCLE" />-->
+
+    </RelativeLayout>
+    <!--<RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/transparent_back">
+
+
+        <TextView
+            android:id="@+id/txtcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:fontFamily="@string/roboto_regular"
+            android:text="Continue"
+            android:textColor="#439FD8"
+            android:textSize="18sp" />
+
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#439FD8"
+            android:textSize="26sp"
+            foo:awesome_font="pixeden_stroke"
+            foo:awesome_icon="PE_ANGLE_LEFT_CIRCLE" />
+
+        <cyd.awesome.material.AwesomeText
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#439FD8"
+            android:textSize="26sp"
+            foo:awesome_font="pixeden_stroke"
+            foo:awesome_icon="PE_ANGLE_RIGHT_CIRCLE" />
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

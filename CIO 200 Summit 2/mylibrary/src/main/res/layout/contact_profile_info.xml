@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:background="#eeeeee"
+        android:text="Personal Details"
+        android:textSize="22sp"
+        android:padding="4dp"
+        android:fontFamily="@string/roboto_regular_bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="First Name"
+            android:textSize="18sp"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_fName"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/dark_gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:text="Last Name"
+            android:textSize="18sp"
+            android:fontFamily="@string/roboto_regular"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_lname"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/dark_gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:text="Description"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_con_info"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:background="@drawable/act_aboutborder"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:background="#eeeeee"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="Contact Details"
+        android:padding="4dp"
+        android:fontFamily="@string/roboto_regular_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_companyTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Company :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_companyTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="4dp"
+                android:text=" WebMOBI"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_designationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Designation :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/tv_designationTitle"
+                android:text=" Software Engineer"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_addressTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Address :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_addressTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:maxLines="4"
+                android:paddingLeft="4dp"
+                android:text=" WebMOBI"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_phoneNoTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Phone no :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_phoneNoTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="4dp"
+                android:text=" 9696576868"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_emailTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Email :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_emailTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="4dp"
+                android:text=" narendar@mendios.com"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_websiteTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Website :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_websiteTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="4dp"
+                android:text=" www.webmobi.com"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_faxTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Fax :"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/tv_fax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_faxTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingLeft="4dp"
+                android:text=" 560029"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:background="#eeeeee"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:fontFamily="@string/roboto_regular_bold"
+        android:text="Alternate Contact Details"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_altPhoneTitle"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@string/roboto_regular"
+                android:text="Phone no :"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tv_alt_phone"
+                android:fontFamily="@string/roboto_regular"
+                android:text=" 8787081743"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingLeft="4dp"
+                android:layout_toRightOf="@+id/tv_altPhoneTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_altEmailTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Email :"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tv_altEmail"
+                android:text=" narendra@gmail.com"
+                android:fontFamily="@string/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingLeft="4dp"
+                android:layout_toRightOf="@+id/tv_altEmailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_altWebsiteTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Website :"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tv_altWebsite"
+                android:text=" www.webmobi.com"
+                android:fontFamily="@string/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingLeft="4dp"
+                android:layout_toRightOf="@+id/tv_altWebsiteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--card details section-->
+    <TextView
+        android:background="#eeeeee"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="Card Details"
+        android:fontFamily="@string/roboto_regular_bold"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_cardTypeTitle"
+                android:fontFamily="@string/roboto_regular"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Card type :"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tv_cardType"
+                android:fontFamily="@string/roboto_regular"
+                android:text=" "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingLeft="4dp"
+                android:layout_toRightOf="@+id/tv_cardTypeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

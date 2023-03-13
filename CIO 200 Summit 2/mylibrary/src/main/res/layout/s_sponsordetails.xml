@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4f6fa"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+    <ScrollView
+        android:id="@+id/mscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#fff4f6fa"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff4f6fa"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/sponsorimage"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/exhibitiorimg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp">
+
+
+                <TextView
+                    android:id="@+id/sponsorname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+
+                    android:text="Dr. Dave Williams"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sponsorname"
+                    android:gravity="center"
+                    android:fontFamily="@string/roboto_regular"
+
+                    android:linksClickable="true"
+                    android:text="Record-breaking Astronaut &amp; Aquanaut,CEO Southlake Regional Health Care"
+                    android:textColor="#ffac55ee"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/r_category"
+                android:background="@drawable/speakerbackground"
+                android:layout_margin="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/doting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="12sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_CIRCLE" />
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/f_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="#8F9FA9"
+                    android:textSize="16sp"
+                    android:gravity="start"
+
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_MAP_MARKER" />
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/f_location"
+                    android:fontFamily="@string/roboto_regular"
+
+                    android:text="Breakout Session"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="12dp"
+                >
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="#8F9FA9"
+                    android:textSize="16sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_MAP_MARKER" />
+
+
+                <TextView
+                    android:id="@+id/venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_toRightOf="@+id/location"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#ff2d3143"
+                    android:textSize="18sp" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/addnotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/speakerbackground"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <cyd.awesome.material.AwesomeText
+                    android:id="@+id/inote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    foo:awesome_font="font_awesome"
+                    foo:awesome_icon="FA_PENCIL_SQUARE_O" />
+
+
+                <TextView
+                    android:id="@+id/txtnote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/inote"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="Add Notes"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+            <!--Contact Info section-->
+            <TextView
+                android:id="@+id/tv_head_cont_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@string/roboto_regular"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffb2b3b5"
+                android:paddingTop="8dp"
+                android:text="Contact Info"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="9dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/gmail"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/iv1"
+                    android:background="@drawable/speakerbackground"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="support@xyz.com"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/iv1"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/facebook"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_fblink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_toRightOf="@+id/iv2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/speakerbackground"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="FB linke/sssssss//sss"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/iv2"
+                    android:padding="10dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_marginBottom="4dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/linkedin"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_linkInLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fblink"
+                    android:layout_toRightOf="@+id/iv3"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="marquee"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="FB linke/sssssss//sss"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/iv3"
+                    android:padding="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/twitter"
+                    />
+                <TextView
+                    android:id="@+id/tv_twittrLnk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_linkInLink"
+                    android:layout_toRightOf="@+id/iv4"
+                    android:ellipsize="marquee"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/speakerbackground"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="Twitterlink/sssssss//sss"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/iv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/iv4"
+                    android:layout_marginLeft="5dp"
+
+                    android:padding="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+
+                    android:src="@drawable/twitter"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_instalnk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_twittrLnk"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_toRightOf="@+id/iv4"
+                    android:background="@drawable/speakerbackground"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@string/roboto_regular"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="Insta"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <!--Document section-->
+            <LinearLayout
+                android:id="@+id/pdfdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@string/roboto_regular"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:text="Documents"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:id="@+id/documents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_margin="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:paddingLeft="10dp"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/filesize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pdfdetails1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/documents1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_margin="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_alignParentBottom="true"
+                   >
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/filesize1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pdfdetails2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/documents2"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_margin="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                   >
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/filesize2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pdfdetails3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/documents3"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_margin="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    >
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/filesize3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pdfdetails4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/documents4"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/speakerbackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_margin="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                  >
+
+
+                    <cyd.awesome.material.AwesomeText
+                        android:id="@+id/ipdf4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        foo:awesome_font="font_awesome"
+                        foo:awesome_icon="FA_FILE_PDF_O" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toLeftOf="@+id/idownload"
+                        android:layout_toRightOf="@+id/ipdf4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtpdf4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="Bangalore"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/filesize4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@string/roboto_regular"
+                            android:singleLine="true"
+                            android:text="8MB"
+                            android:textColor="#8F9FA9"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--Description section-->
+
+            <TextView
+                android:id="@+id/tv_head_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@string/roboto_regular"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Description"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/speakerbackground"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@string/roboto_regular"
+                android:linksClickable="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/addinvite"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_above="@+id/addschedule"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent_back"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/txtinvite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:fontFamily="@string/roboto_regular"
+                android:singleLine="true"
+                android:text="INVITE MEETING"
+                android:textColor="#439FD8"
+                android:textSize="12sp" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/inv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/txtinvite"
+                android:textColor="#439FD8"
+                android:textSize="16sp"
+                foo:awesome_font="pixeden_stroke"
+                foo:awesome_icon="PE_PLUS" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addschedule"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/transparent_back"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp">
+
+
+            <TextView
+                android:id="@+id/txtsch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:fontFamily="@string/roboto_regular"
+                android:singleLine="true"
+                android:text="ADD TO FAVOURITE"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <cyd.awesome.material.AwesomeText
+                android:id="@+id/isch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/txtsch"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                foo:awesome_font="material_design"
+                foo:awesome_icon="MD_ADD_CIRCLE_OUTLINE" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:foo="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/floor_map"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/wvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            foo:navigationIcon="@drawable/backwhite" />
+
+        <WebView
+            android:id="@+id/s_mapvenue"
+            android:layout_below="@+id/wvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:padding="8dp"
+            android:textColor="#ff2d3143"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

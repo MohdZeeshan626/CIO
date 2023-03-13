@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.webmobi.gecmedia">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk tools:overrideLibrary="us.zoom.androidlib,us.zoom.videomeetings"
+        />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="TYPE_STEP_COUNT_CADENCE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+
+
+    <!--<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--  <uses-permission android:name="android.permission.READ_CALENDAR" />
+      <uses-permission android:name="android.permission.WRITE_CALENDAR" />-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--
+        <uses-permission android:name="android.permission.VIBRATE" />
+    -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--
+        <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    -->
+
+    <permission
+        android:name="com.webmobi.gecmedia.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.webmobi.gecmedia.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.singleevent.sdk.App"
+        android:allowBackup="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:exported="true"
+        tools:replace="allowBackup,supportsRtl,android:icon"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+
+                 <data
+                     android:host="www.webmobi.com"
+                     android:scheme="http" />
+                 <data
+                     android:host="www.webmobi.com"
+                     android:scheme="https" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data
+                     android:host="web.mobi.event"
+                     android:pathPrefix="/app"
+                     android:scheme="http" />
+             </intent-filter>-->
+        </activity>
+        <activity android:name="com.webmobi.gecmedia.Views.LinkedInLoginActivity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.Disc_DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.Enter_DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.HomeScreenMulti"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.EventCategory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.RegActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.RegActivityDemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.LoginActivityDemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.Signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.DisUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name="com.webmobi.gecmedia.Views.MultiEventSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize"/>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB8LOBYmG_kuWNhQ4ldEjQbyEDo_l9puEw" />
+
+        <activity
+            android:name="com.webmobi.gecmedia.Views.TokenExpireAlertReceived"
+            android:launchMode="standard"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.HomeScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.nearby_filter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+
+        <!--
+              <provider android:authorities="com.facebook.app.FacebookContentProvider@string/facebook_app_id"
+              android:name="com.facebook.FacebookContentProvider"
+              android:exported="true"/>
+        -->
+        <!-- Firebase Notifications -->
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data android:scheme="@string/fb_login_protocol_scheme" />
+             </intent-filter>-->
+        </activity>
+
+        <service android:name="com.webmobi.gecmedia.service.MyFirebaseInstanceIDService"
+            android:exported="true"
+            >
+
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.webmobi.gecmedia.SingleEventHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.LinkedinAppProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.LinkedInProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.PrivateSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.DisCover_Search"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.WishList"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <!-- Firebase Notifications -->
+        <service android:name="com.webmobi.gecmedia.service.MyFirebaseMessagingService"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.webmobi.gecmedia.service.UploadContactsFragmentDetails"
+            android:exported="false" />
+
+        <activity
+            android:name="com.webmobi.gecmedia.Views.MyDiscChat"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.MyAttendeeProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.LocalMessageView"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.webmobi.gecmedia.MyDiscRequest"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.MyDiscMeetings"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.PopularActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.ContactsProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <activity
+            android:name="com.webmobi.gecmedia.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.webmobi.gecmedia.Home_demo"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.webmobi.gecmedia.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SingleAppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <receiver
+            android:name="com.webmobi.gecmedia.CustomViews.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.webmobi.gecmedia.Views.AllCategory"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.HelpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.ContactUs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.AppInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.PrivacyPolicy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.PrivateSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.DiscoveryEventDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.webmobi.gecmedia.Views.NewProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="com.webmobi.gecmedia.Views.ChangePassword" />
+        <activity android:name="com.webmobi.gecmedia.Views.EditProfile"></activity>
+        <activity
+            android:name="com.webmobi.gecmedia.SessionExpired"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.singleevent.sdk.View.RightActivity.Notification"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.RightActivity.Notification" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.singleevent.sdk.View.RightActivity.MyChat"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.RightActivity.MyChat" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.singleevent.sdk.View.LeftActivity.Feeds"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.LeftActivity.Feeds" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.singleevent.sdk.View.RightActivity.group_feed.GroupFeedView"
+            android:exported="false"
+            >
+            <intent-filter>
+                <action android:name="com.singleevent.sdk.View.RightActivity.group_feed.GroupFeedView" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>
+
+
+

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        foo:navigationIcon="@drawable/backwhite" />
+
+    <ScrollView
+        android:id="@+id/mscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/contains"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/noschd"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+
+                    android:src="@drawable/myschedule1"
+                    android:id="@+id/mysimg"
+                    />
+                <TextView
+                    android:id="@+id/no1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mysimg"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@string/rubic_regular"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="No Schedule Created Yet!"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/no2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no1"
+                    android:fontFamily="@string/rubic_regular"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#B1B1B1"
+                    android:gravity="center"
+                    android:text="Lets create your first schedule"
+                    android:textSize="15sp"
+                  />
+
+            <TextView
+                android:id="@+id/noitems"
+                android:fontFamily="@string/roboto_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/no2"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="No Items Added"
+                android:textSize="22sp"
+                android:visibility="gone" />
+                <Button
+                    android:id="@+id/myschbut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="40dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_below="@+id/no2"
+                    android:paddingLeft="40dp"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/healthpostbut"
+                    android:textAllCaps="false"
+                    android:text="Create Schedule"
+                    android:textSize="17sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

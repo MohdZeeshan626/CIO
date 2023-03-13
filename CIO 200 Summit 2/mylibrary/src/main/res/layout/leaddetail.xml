@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:navigationIcon="@drawable/backwhite">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@string/roboto_regular"
+            android:text="Leaderboard"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:background="#dddddd"
+        android:layout_below="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/lprofile"
+            android:layout_height="96dp"
+            android:layout_width="96dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/likes"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/lname"
+            android:layout_toRightOf="@+id/lprofile"
+            android:text="Drew M"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:padding="15dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ltotalscore"
+            android:background="@color/sColorPrimary"
+            android:text="2045"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:background="#dddddd"
+        android:layout_below="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/grouplisttext"
+        android:padding="8dp"
+        android:text="Score Feed"
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:visibility="visible"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:textSize="25dp"
+
+        />
+    <View
+        android:background="#dddddd"
+        android:layout_below="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"/>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scorelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@color/light_gray"
+            android:dividerHeight="0dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noitems"
+        android:text="Not Available"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+
+        />
+
+
+</LinearLayout>

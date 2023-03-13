@@ -1,0 +1,177 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Login">Already have an account? <b>Log in</b></string>
+    <string name="proximanova">Roboto-Regular.otf</string>
+    <string name="proximanovalight">Roboto-Regular.otf</string>
+    <string name="proximanovabold">Roboto-Bold.ttf</string>
+    <string name="roboto_regular">Roboto-Regular.otf</string>
+    <string name="rubic_regular">Rubic-Regular.ttf</string>
+    <string name="roboto_regular_light">Roboto-Regular.otf</string>
+    <string name="roboto_regular_bold">Roboto-Bold.ttf</string>
+    <string name="update_linkedin_app_title">Update LinkedIn app</string>
+    <string name="update_linkedin_app_message">To connect with LinkedIn you need to update LinkedIn app.
+        Would you like to do it?</string>
+    <string name="update_linkedin_app_download">Download</string>
+    <string name="update_linkedin_app_cancel">Cancel</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <!--restricted app id-->
+    <!--        <string name="facebook_app_id">266479280059749</string>-->
+    <!--        <string name="fb_login_protocol_scheme">fb266479280059749</string>-->
+    <!--restricted app id end-->
+    <string name="facebook_app_id">554180582493160</string>
+    <string name="fb_login_protocol_scheme">fb554180582493160</string>
+
+
+    <!--    <string name="facebook_app_id">231997537338251</string>-->
+    <!--    <string name="fb_login_protocol_scheme">fb231997537338251</string>-->
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">wTpYIYD53kGyqHW0riBKNUl8K</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">KmiKp95MenxMLSkSFASmXjh7MoDXox2BxSHzKXi9QozI2kBhfW</string>
+    <string name="test_paragraph">A paragraph is a series of related sentences developing a central idea, called the topic. Try to think about paragraphs in terms of thematic unity</string>
+
+    <string name="google_map_api_key" templateMergeStrategy="preserve">AIzaSyB8LOBYmG_kuWNhQ4ldEjQbyEDo_l9puEw</string>
+
+    <array name="letter_tile_colors">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+
+        <item>#D2691E</item>
+        <item>#FF7F50</item>
+        <item>#f9a43e</item>
+        <item>#6495ED</item>
+        <item>#67bf74</item>
+        <item>#00008B</item>
+        <item>#9932CC</item>
+        <item>#00FFFF</item>
+
+
+    </array>
+    <string name="type_your_message">Type a message...</string>
+
+    <string name="btn_go">Go</string>
+    <string name="txt_label_size">Date</string>
+    <string name="txt_label_colour">Time</string>
+    <string name="label_color">Colour</string>
+    <string name="label_size">Size</string>
+    <string name="label_prefered_date">Preferred date</string>
+    <string name="label_prefered_time">Preferred time</string>
+    <string name="label_date">Preferred date</string>
+    <string name="label_time">Preferred time</string>
+    <string name="action_book">Book</string>
+
+
+    // Gallery and Camera resources
+
+    <string name="imagepicker_action_ok">OK</string>
+    <string name="imagepicker_action_done">DONE</string>
+
+    <string name="imagepicker_title_folder">Albums</string>
+    <string name="imagepicker_title_image">Galleries</string>
+
+    <string name="imagepicker_text_gif">GIF</string>
+    <string name="imagepicker_photo_count_multiple">%d images</string>
+    <string name="imagepicker_photo_count_single">%d image</string>
+
+    <string name="imagepicker_error_no_camera">No camera found</string>
+    <string name="imagepicker_error_create_image_file">Failed to create image file</string>
+    <string name="imagepicker_error_images_not_exist">Images not exist</string>
+    <string name="imagepicker_error_unknown">Unknown error</string>
+
+    <string name="imagepicker_msg_no_images">No images</string>
+    <string name="imagepicker_msg_no_write_external_storage_permission">To continue, please give access to your photos</string>
+    <string name="imagepicker_msg_no_camera_permission">To continue, please give access to take pictures</string>
+    <string name="imagepicker_msg_no_write_external_storage_camera_permission">To continue, please give access to take pictures</string>
+    <string name="imagepicker_msg_limit_images">Limit selection to %d images</string>
+
+    <plurals name="likes_count">
+        <item quantity="zero">Like</item>
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+
+    <string name="txt_label_conf_name">Name: %1s</string>
+    <string name="txt_label_conf_title">Title: %1s</string>
+    <string name="txt_label_conf_time">Time: %1s</string>
+    <string name="txt_label_conf_date">Date: %1s</string>
+
+    <string name="txt_conf_message">You\'ll be notified  once your request is accepted!</string>
+    <string name="userfilekey">currentUser</string>
+    <string name="message_to_select_device_id">Message will be sent to the device id irrespective of any operating system used by the user (Android/ios)</string>
+    <string name="report_description">Send a reminder to the exhibitors about this lead generation feature who have not scanned any leads.</string>
+    <string name="notification_error_ssl_cert_invalid">SSL Ccertificate Errror</string>
+    <string name="can_t_connect_to_network_please_check_your_internet_connection">Can\'t connect to network. Please, check your internet connection</string>
+
+    <string-array name="platform_array">
+        <item>Android</item>
+        <item>IOS</item>
+        <item>Android&amp;IOS</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>PM</item>
+        <item>AM</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_id">push</string>
+
+
+    <string name="polling_details"> You answered this poll</string>
+    <string name="this_app_name">Zoom SDK Demo</string>
+
+    <string name="invite_acitivity_name">Meeting Invite Example</string>
+
+    <string name="zm_rc_using_fingers_for_remote_control">Remotely control a desktop using gestures</string>
+    <string name="zm_rc_one_finger_tap">Tap with one finger</string>
+    <string name="zm_rc_one_finger_tap_description">Tap the screen with one finger to click the mouse</string>
+    <string name="zm_rc_one_finger_double_taps">Double tap with one finger</string>
+    <string name="zm_rc_one_finger_double_taps_description">Double tap with one finger to double click the mouse</string>
+    <string name="zm_rc_one_long_tap">Long press with one finger</string>
+    <string name="zm_rc_one_long_tap_description">Press the screen with one finger to right-click the mouse</string>
+    <string name="zm_rc_two_fingers_scroll">Swipe with two fingers</string>
+    <string name="zm_rc_two_fingers_scroll_description">Swipe with two fingers to scroll up and down</string>
+    <string name="zm_rc_two_fingers_pinch">Pinch with two fingers</string>
+    <string name="zm_rc_two_fingers_pinch_description">Pinch in and out with two fingers to zoom in and out</string>
+    <string name="zm_rc_mouse_icon">Mouse icon</string>
+    <string name="zm_rc_mouse_icon_description">Drag the mouse icon to move the remote mouse pointer</string>
+    <string name="zm_rc_tap_notice">Tap here to control %s\'s screen remotely</string>
+
+    <string name="alert_other_is_sharing">You cannot start screen share while the other participant is sharing.</string>
+
+    <string name="settings_custom_ui">Customized UI</string>
+    <string name="settings_switch_domain">Switch domain</string>
+    <string name="settings_hide_screen_share_toolbar_annotation">Hide annotation button in screen share</string>
+    <string name="settings_hide_screen_share_toolbar_stopshare">Hide stopshare button in screen share</string>
+
+
+    <!--Health ap-->
+
+    <string name="signin">Already have account?</string>
+    <string name="getstarted">Get Started</string>
+    <string name="login">Sign In</string>
+    <string name="mobile">Lets start with your email address</string>
+    <string name="numbertoreach">Email Address we can use to reach you out</string>
+    <string name="verify">Verify</string>
+    <string name="verifynum">Verify your number</string>
+    <string name="texton">We will text you on 8520369741</string>
+    <string name="con">Continue</string>
+    <string name="Resend">Send me a new code</string>
+    <string name="email_address"> Email Address</string>
+    <string name="leaders">LEADERBOARD</string>
+    <string name="challenges">CHALLENGES</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="active_challenge">You dont have any active challenges. Your Challenge may have ended recently so check the completed tab for finalized scores.</string>
+    <string name="upcoming_challenge">You dont have any upcoming challenges. Join or Create a Challenge.</string>
+    <string name="complete_challenge">You dont have any recently completed challenges.</string>
+    <string name="challenge_start">Challenge starts on</string>
+    <string name="challenge_end">Challenge ended on</string>
+
+
+</resources>

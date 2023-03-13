@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.webmobi.single.MainActivity">
+    <item
+        android:orderInCategory="101"
+        android:id="@+id/post"
+        app:showAsAction="ifRoom"
+        app:actionLayout="@layout/s_custom_menu"
+        android:title="" />
+</menu>

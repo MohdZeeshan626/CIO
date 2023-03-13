@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">GEC Media Group</string>
+
+    <string name="update_linkedin_app_title">Update LinkedIn app</string>
+    <string name="update_linkedin_app_message">To connect with LinkedIn you need to update LinkedIn app. Would you like to do it?</string>
+    <string name="update_linkedin_app_download">Download</string>
+    <string name="update_linkedin_app_cancel">Cancel</string>
+    <string name="privatemsg">Enter a passpharse to access a private event.A passphrase is provided by the event organizer.</string>
+    <string name="clear">Clear</string>
+    <string name="proximanova">Mark Simonson - Proxima Nova Alt Regular.otf</string>
+    <string name="proximanovalight">Mark Simonson - Proxima Nova Alt Light.otf</string>
+    <string name="proximanovabold">Mark Simonson - Proxima Nova Alt Semibold.otf</string>
+
+
+    <string name="facebook_app_id">554180582493160</string>
+    <string name="fb_login_protocol_scheme">fb554180582493160</string>
+
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">wTpYIYD53kGyqHW0riBKNUl8K</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">KmiKp95MenxMLSkSFASmXjh7MoDXox2BxSHzKXi9QozI2kBhfW</string>
+    <string name="google_map_api_key" templateMergeStrategy="preserve">AIzaSyB8LOBYmG_kuWNhQ4ldEjQbyEDo_l9puEw</string>
+    <string name="termcondition">All copyright, trademarks, design rights, and other intellectual properties belong to webMOBI and/or third parties. webMOBI reserves all the rights and doesn’t grant a right or license to use any intellectual property including trademark, design or copyright.
+</string>
+    <string name="Login">Already have an account? <b>Log in</b></string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">Daily Workout</string>
+    <string name="slide_1_desc">Set your daily workout routine by the help of trainer</string>
+    <string name="slide_2_title">Meditation Techniques </string>
+    <string name="slide_2_desc">Learn about the different meditation techniques and practice them</string>
+    <string name="slide_3_title">Diet Chart</string>
+    <string name="slide_3_desc">Make your diet chart by the help of health experts</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="fire">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="dialog_fire_missiles">Do You want to delete the Event?</string>
+    <string name="dialog_ask_to_login">Do you want to Login ?</string>
+    <string name="skiplogin"><u>SKIP LOGIN</u></string>
+</resources>
